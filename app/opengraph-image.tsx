@@ -5,10 +5,6 @@ export const alt = "Bobby Ho - Developer Portfolio";
 export const contentType = "image/png";
 
 export default async function OG() {
-  const sfPro = await fetch(
-    new URL("./fonts/SF-Pro-Display-Medium.otf", import.meta.url),
-  ).then((res) => res.arrayBuffer());
-
   return new ImageResponse(
     (
       <div
@@ -23,8 +19,8 @@ export default async function OG() {
         }}
       >
         <img
-          height={400}
-          width={400}
+          height={40}
+          width={40}
           src={new URL("../public/image/doge.png", import.meta.url).toString()}
           alt="Doge Logo"
           tw="w-40 h-40 mb-4 opacity-95"
@@ -32,7 +28,6 @@ export default async function OG() {
         <h1
           style={{
             fontSize: "80px",
-            fontFamily: "SF Pro",
             background:"linear-gradient(to right, #9333EA 0%, #1d4ed8 100%)",
             backgroundClip: "text",
             color: "transparent",
@@ -46,8 +41,6 @@ export default async function OG() {
         <h2
           style={{
             fontSize: "50px",
-            fontFamily: "SF Pro",
-            // background:"linear-gradient(to right, #9333EA 0%, #1d4ed8 100%)",
             backgroundColor:"black",
             backgroundClip: "text",
             color: "transparent",
@@ -63,12 +56,6 @@ export default async function OG() {
     {
       width: 1200,
       height: 630,
-      fonts: [
-        {
-          name: "SF Pro",
-          data: sfPro,
-        },
-      ],
     },
   );
 }
