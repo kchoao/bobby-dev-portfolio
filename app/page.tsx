@@ -15,14 +15,14 @@ export default function Home() {
     return(
         <>
             {/* Hero section */}
-            <div className="w-full h-fit pt-16 bg-zinc-50 dark:bg-zinc-800 border-b border-slate-900">
+            <div className="w-full h-fit px-4 pt-8 lg:pt-16 bg-zinc-50 dark:bg-zinc-800 border-b border-slate-900">
                 <div className="mx-auto max-w-8xl py-12 lg:py-24 flex flex-col-reverse lg:flex-row gap-x-12">
-                    <div className="lg:flex-1 lg:basis-3/4">
+                    <div className="lg:basis-3/4">
                         <h1 className="
-                        text-center lg:text-left text-3xl/relaxed lg:text-6xl/relaxed
+                        text-center lg:text-left text-2xl/relaxed lg:text-6xl/relaxed
                         from-purple-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent font-extrabold
                         ">
-                            <Balancer>
+                            <Balancer ratio={0.2}>
                             Hello! I&apos;m Bobby, a developer based in Hong Kong.
                             </Balancer>
                         </h1>
@@ -33,9 +33,9 @@ export default function Home() {
                             Whether it&apos;s designing a website or building a mobile app, I&apos;ve got you covered.
                             </Balancer>
                         </div>
-                        <div className="mt-12 flex space-x-5 justify-center lg:justify-start">
+                        <div className="mt-6 lg:mt-12 flex space-x-5 justify-center lg:justify-start">
                             <Link
-                                className="group flex max-w-fit items-center justify-center space-x-2 rounded-xl border border-black bg-black px-6 py-2 text-white transition-all shadow-md hover:-translate-y-2 duration-150"
+                                className="group flex max-w-fit items-center justify-center space-x-2 rounded-xl border border-black bg-black px-3 lg:px-6 py-2 text-white transition-all shadow-md hover:-translate-y-2 duration-150"
                                 href={"https://www.linkedin.com/in/bobby-ho-dev/"}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -44,7 +44,7 @@ export default function Home() {
                                 <div>View Linkedin</div>
                             </Link>
                             <Link
-                                className="flex max-w-fit items-center justify-center space-x-2 rounded-xl border border-gray-300 bg-white px-6 py-2 text-gray-600 shadow-md transition-all hover:-translate-y-2 duration-150"
+                                className="flex max-w-fit items-center justify-center space-x-2 rounded-xl border border-gray-300 bg-white px-3 lg:px-6 py-2 text-gray-600 shadow-md transition-all hover:-translate-y-2 duration-150"
                                 href="https://github.com/kchoao"
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -57,28 +57,30 @@ export default function Home() {
                         </div>
             
                     </div>
-                    <Image
-                        className="max-w-sm mb-16 lg:mb-0 rounded-lg object-cover self-center"
-                        alt={"Profile Picture"}
-                        src={Profile}
-                    />
+                    <div className="lg:basis-1/4 mb-6 lg:mb-0 self-center">
+                        <Image
+                            className="w-full max-h-[50vh] rounded-lg object-cover"
+                            alt={"Profile Picture"}
+                            src={Profile}
+                        />
+                    </div>
                 </div>
             </div>
             {/* Background section */}
-            <div className="min-h-80 max-w-7xl bg-zinc-50 dark:bg-zinc-800 border border-slate-900 rounded-lg mx-4 lg:mx-auto my-12 lg:my-24 px-8 lg:px-16 py-6 lg:py-12">
-                    <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-bold">Skills</h1>
-                    <div className="grid lg:grid-cols-2 gap-6 mt-4">
+            <div className="min-h-80 max-w-7xl bg-zinc-50 dark:bg-zinc-800 border border-slate-900 rounded-lg mx-2 lg:mx-auto my-12 lg:my-24 px-4 lg:px-16 py-6 lg:py-12">
+                    <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold">Skills</h1>
+                    <div className="grid lg:grid-cols-2 lg:gap-6 mt-4">
                         {Skills.map((skill, index)=>(
-                            <div key={`skill-${index}`}  className="flex gap-6 py-6">
-                                <FadeInWhenVisible delay={(index+1)/10} className="h-16 w-16 p-1 text-2xl lg:text-3xl text-center font-extrabold text-transparent bg-clip-border from-purple-600 to-rose-400  bg-gradient-to-r rounded-xl">
+                            <div key={`skill-${index}`}  className="flex gap-2 lg:gap-6 py-4 lg:py-6">
+                                <FadeInWhenVisible delay={(index+1)/10} className="h-12 w-12 lg:h-16 lg:w-16 p-1 text-xl lg:text-3xl text-center font-extrabold text-transparent bg-clip-border from-purple-600 to-rose-400  bg-gradient-to-r rounded-xl">
                                     <div className="rounded-lg h-full w-full bg-zinc-50 dark:bg-zinc-800">
-                                        <div className="py-3 text-transparent bg-clip-text from-rose-400 via-fuchsia-500 to-indigo-500 bg-gradient-to-r">
+                                        <div className="py-2 lg:py-3 text-transparent bg-clip-text from-rose-400 via-fuchsia-500 to-indigo-500 bg-gradient-to-r">
                                             {index+1}
                                         </div>
                                     </div>
                                 </FadeInWhenVisible>
                                 <div className="flex-1">
-                                    <h3 className="h-16 py-4 text-center lg:text-left text-2xl lg:text-3xl font-bold">{skill.title}</h3>
+                                    <h3 className="h-12 lg:h-16 py-3 lg:py-4 text-center lg:text-left text-xl lg:text-3xl font-bold">{skill.title}</h3>
                                     <div className="w-full text-center lg:text-left pt-6">
                                         <Balancer ratio={0.2}>
                                         {skill.content}
@@ -91,17 +93,17 @@ export default function Home() {
             </div>
             {/* Project section */}
             <div className="w-full bg-zinc-50 dark:bg-zinc-800 border-y border-slate-900 mb-16">
-                <div className="min-h-80 max-w-8xl mx-4 lg:mx-auto my-12 lg:my-24">
-                    <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-bold mb-6">Projects</h1>
-                    <h4 className="text-xl text-center lg:text-left mb-6">Some of the projects I&apos;m recently working on</h4>
+                <div className="min-h-80 max-w-8xl mx-4 lg:mx-auto py-6 lg:py-12">
+                    <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold mb-2 lg:mb-6">Projects</h1>
+                    <h4 className="text-center lg:text-left mb-6">Some of the projects I&apos;m recently working on</h4>
                     <div className="grid lg:grid-cols-2 gap-6">
                         {Projects.map((project, index)=>(
                             <div key={`project-${index}`} className="h-full w-full">
                                 {/* Image */}
                                 {project.demo}
-                                <div className="pt-6 lg:pt-12 pb-12 lg:pb-0">
-                                    <h3 className="text-center text-2xl lg:text-3xl font-bold">{project.title}</h3>
-                                    <div className="w-full text-center pt-6">
+                                <div className="pt-6 lg:pt-12 pb-6 lg:pb-0">
+                                    <h3 className="text-center text-xl lg:text-3xl font-bold">{project.title}</h3>
+                                    <div className="w-full text-center pt-2 lg:pt-6">
                                         <Balancer ratio={0.2}>
                                         {project.content}
                                         </Balancer>
@@ -113,8 +115,8 @@ export default function Home() {
                 </div>
             </div>
             {/* About this web */}
-            <div className="min-h-80 max-w-7xl bg-zinc-50 dark:bg-zinc-800 border border-slate-900 rounded-lg mx-4 lg:mx-auto my-12 lg:my-24 px-8 lg:px-16 py-6 lg:py-12">
-                    <h1 className="text-center lg:text-left text-4xl lg:text-5xl font-bold">About this website</h1>
+            <div className="min-h-80 max-w-7xl bg-zinc-50 dark:bg-zinc-800 border border-slate-900 rounded-lg mx-2 lg:mx-auto my-12 lg:my-24 px-4 lg:px-16 py-6 lg:py-12">
+                    <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold">About this website</h1>
                     <div className="flex h-60 items-center justify-center">
                         <WebVitals/>
                     </div>

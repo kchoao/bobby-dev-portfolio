@@ -2,7 +2,7 @@
 import { ImageResponse } from "next/server";
 
 export const runtime = "edge";
-export const alt = "Precedent - Building blocks for your Next.js project";
+export const alt = "Bobby Ho - Developer Portfolio";
 export const contentType = "image/png";
 
 export default async function OG() {
@@ -21,29 +21,42 @@ export default async function OG() {
           alignItems: "center",
           justifyContent: "center",
           backgroundColor: "white",
-          backgroundImage:
-            "linear-gradient(to bottom right, #E0E7FF 25%, #ffffff 50%, #CFFAFE 75%)",
         }}
       >
         <img
-          src={new URL("../public/logo.png", import.meta.url).toString()}
-          alt="Precedent Logo"
-          tw="w-20 h-20 mb-4 opacity-95"
+          src={new URL("../public/image/doge.png", import.meta.url).toString()}
+          alt="Doge Logo"
+          tw="w-40 h-40 mb-4 opacity-95"
         />
         <h1
           style={{
-            fontSize: "100px",
+            fontSize: "80px",
             fontFamily: "SF Pro",
-            background:
-              "linear-gradient(to bottom right, #000000 21.66%, #78716c 86.47%)",
+            background:"linear-gradient(to right, #9333EA 0%, #1d4ed8 100%)",
             backgroundClip: "text",
             color: "transparent",
             lineHeight: "5rem",
             letterSpacing: "-0.02em",
+            textAlign: "center"
           }}
         >
-          Precedent
+          Developer Portfolio
         </h1>
+        <h2
+          style={{
+            fontSize: "50px",
+            fontFamily: "SF Pro",
+            // background:"linear-gradient(to right, #9333EA 0%, #1d4ed8 100%)",
+            backgroundColor:"black",
+            backgroundClip: "text",
+            color: "transparent",
+            lineHeight: "5rem",
+            letterSpacing: "-0.02em",
+            textAlign: "center"
+          }}
+        >
+          Bobby Ho
+        </h2>
       </div>
     ),
     {

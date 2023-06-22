@@ -41,7 +41,7 @@ export default async function RootLayout({
           </Suspense>
           <main className="relative min-h-screen w-screen 
           text-zinc-800 dark:text-zinc-100 
-          text-base lg:text-lg">
+          text-sm lg:text-lg">
             {children}
             <Footer />
           </main>
