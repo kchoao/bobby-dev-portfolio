@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   swcMinify: true,
   images: {
     domains: ["lh3.googleusercontent.com", "vercel.com"],
@@ -9,7 +11,7 @@ const nextConfig = {
     return [
       {
         source: "/github",
-        destination: "https://github.com/steven-tey/precedent",
+        destination: "https://github.com/kchoao",
         permanent: false,
       },
     ];

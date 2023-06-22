@@ -18,11 +18,11 @@ export default function FadeInWhenVisible({
     className, 
     viewport = {
         once:true
-    }, 
+    },
+    delay = 0,
     transition = {
-        duration: 0.5 ,
-        delay: 0.2,
-        staggerChildren: 0.2
+        duration: 0.2 ,
+        staggerChildren: 0.3
     }, 
     children } : FadeInWhenVisibleProps) {
 
@@ -34,15 +34,15 @@ export default function FadeInWhenVisible({
             whileInView="show"
             viewport={viewport}
             variants={FADE_UP_ANIMATION_VARIANTS}
-            transition={transition}
+            transition={{...transition, delay}}
             >
-            {React.Children.map(children, child => {
+            {/* {React.Children.map(children, (child, index) => {
                 return <motion.div 
                 variants={FADE_UP_ANIMATION_VARIANTS}  
-                transition={{ duration: 0.3}}
                 >{child}</motion.div>
             })
-            }
+            } */}
+            {children}
         </motion.div>
     );
 }
