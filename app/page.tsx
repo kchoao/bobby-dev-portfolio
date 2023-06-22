@@ -99,7 +99,7 @@ export default function Home() {
                             <div key={`project-${index}`} className="h-full w-full">
                                 {/* Image */}
                                 {project.demo}
-                                <div className="pt-6 lg:pt-12">
+                                <div className="pt-6 lg:pt-12 pb-12 lg:pb-0">
                                     <h3 className="text-center text-2xl lg:text-3xl font-bold">{project.title}</h3>
                                     <div className="w-full text-center pt-6">
                                         <Balancer ratio={0.2}>
@@ -161,7 +161,7 @@ const Projects = [
         content: "Developed a fully responsive website for a startup. The site is optimized to work across all devices and platforms.",
         demo: (
             <Image
-            className="h-80 w-full mb-16 lg:mb-0 rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
+            className="h-80 w-full rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
             alt={"Project picture: Startup Website"}
             src={WebProject}
             />
@@ -172,7 +172,7 @@ const Projects = [
         content: "Mobile App Development",
         demo: (
             <Image
-            className="h-80 w-full mb-16 lg:mb-0 rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
+            className="h-80 w-full rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
             alt={"Project picture: Mobile App Development"}
             src={AppProject}
             />
