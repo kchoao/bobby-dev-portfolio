@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { ImageResponse } from "next/server";
-
+import Image from "next/image";
 export const runtime = "edge";
 export const alt = "Bobby Ho - Developer Portfolio";
 export const contentType = "image/png";
@@ -23,7 +23,9 @@ export default async function OG() {
           backgroundColor: "white",
         }}
       >
-        <img
+        <Image
+          height={800}
+          width={800}
           src={new URL("../public/image/doge.png", import.meta.url).toString()}
           alt="Doge Logo"
           tw="w-40 h-40 mb-4 opacity-95"
