@@ -11,11 +11,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     {
-      url: "https://bobbyho.dev",
+      url: "https://bobby-dev-portfolio.vercel.app/",
       lastModified: new Date(),
     },
     ...users.map((user) => ({
-      url: `https://bobbyho.dev/${user.id}`,
+      url: `https://bobby-dev-portfolio.vercel.app/${user.id}`,
       lastModified: new Date(),
     })),
   ];

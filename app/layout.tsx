@@ -20,7 +20,7 @@ export const metadata = {
       "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
     creator: "@steventey",
   },
-  metadataBase: new URL("https://precedent.dev"),
+  metadataBase: new URL("https://bobby-dev-portfolio.vercel.app/"),
   themeColor: "#FFF",
 };
 
