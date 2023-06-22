@@ -5,9 +5,12 @@ import { sfPro, inter } from "./fonts";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
+import Image from "next/image";
+import Background from "@/public/image/background.jpg"
+import ThemeProvider from "@/components/provider/theme-provider";
 
 export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
+  title: "Bobby Ho - Developer Portfolio",
   description:
     "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
   twitter: {
@@ -28,17 +31,30 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>
-        <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
-        <Suspense fallback="...">
-          {/* @ts-expect-error Server Component */}
-          <Nav />
-        </Suspense>
-        <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
-          {children}
-        </main>
-        <Footer />
-        <Analytics />
+      <body className={cx(sfPro.variable, inter.variable,"relative")}>
+        <ThemeProvider>
+          {/* <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" /> */}
+          <Image 
+            className="fixed h-full w-full object-cover -z-50"
+            width={0}
+            height={0}
+            sizes="100vw"
+            alt="Hong Kong Mountains"
+            src={Background}
+          />
+          <Suspense fallback="...">
+            {/* @ts-expect-error Server Component */}
+            <Nav />
+          </Suspense>
+          <main className="relative min-h-screen w-screen pb-16 
+          text-zinc-800 dark:text-zinc-100 
+          text-base lg:text-lg">
+            {children}
+          </main>
+          <Footer />
+          <Analytics />
+
+        </ThemeProvider>
       </body>
     </html>
   );

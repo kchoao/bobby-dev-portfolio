@@ -6,6 +6,7 @@ import useScroll from "@/lib/hooks/use-scroll";
 import { useSignInModal } from "./sign-in-modal";
 import UserDropdown from "./user-dropdown";
 import { Session } from "next-auth";
+import ThemeSwitcher from "./theme-switcher";
 
 export default function NavBar({ session }: { session: Session | null }) {
   const { SignInModal, setShowSignInModal } = useSignInModal();
@@ -15,24 +16,19 @@ export default function NavBar({ session }: { session: Session | null }) {
     <>
       <SignInModal />
       <div
-        className={`fixed top-0 w-full ${
+        className={`fixed top-0 left-0 right-0 w-full ${
           scrolled
-            ? "border-b border-gray-200 bg-white/50 backdrop-blur-xl"
-            : "bg-white/0"
+            ? "bg-zinc-50/50 dark:bg-zinc-800/50 backdrop-blur-xl"
+            : "bg-zinc-50/0 dark:bg-zinc-800/0"
         } z-30 transition-all`}
       >
-        <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
+        <div className="flex h-16 max-w-8xl pl-3 items-center justify-between mx-4 lg:mx-auto">
           <Link href="/" className="flex items-center font-display text-2xl">
-            <Image
-              src="/logo.png"
-              alt="Precedent logo"
-              width="30"
-              height="30"
-              className="mr-2 rounded-sm"
-            ></Image>
-            <p>Precedent</p>
+            <p>Bobby Ho</p>
           </Link>
-          <div>
+          <ThemeSwitcher />
+
+          {/* <div>
             {session ? (
               <UserDropdown session={session} />
             ) : (
@@ -43,7 +39,7 @@ export default function NavBar({ session }: { session: Session | null }) {
                 Sign In
               </button>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </>

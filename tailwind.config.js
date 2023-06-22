@@ -2,12 +2,21 @@
 const plugin = require("tailwindcss/plugin");
 
 module.exports = {
+  darkMode: 'class',
   content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   future: {
     hoverOnlyWhenSupported: true,
   },
   theme: {
     extend: {
+      maxWidth: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
+      width: {
+        '8xl': '88rem',
+        '9xl': '96rem',
+      },
       fontFamily: {
         display: ["var(--font-sf)", "system-ui", "sans-serif"],
         default: ["var(--font-inter)", "system-ui", "sans-serif"],
@@ -67,5 +76,36 @@ module.exports = {
       addVariant("radix-side-top", '&[data-side="top"]');
       addVariant("radix-side-bottom", '&[data-side="bottom"]');
     }),
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'translate-z': (value) => ({
+            '--tw-translate-z': value,
+            transform: ` translate3d(var(--tw-translate-x), var(--tw-translate-y), var(--tw-translate-z)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))`,
+          }), // this is actual CSS
+        },
+        { values: theme('translate'), supportsNegativeValues: true }
+      )
+    }),
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'perspective': (value) => ({
+            perspective: value,
+          })
+        },
+        { values: theme('perspective'), supportsNegativeValues: true }
+      )
+    }),
+    plugin(function({ matchUtilities, theme }) {
+      matchUtilities(
+        {
+          'transform-style': (value) => ({
+            'transform-style': value
+          }) 
+        },
+        { values: theme('transform-style'), supportsNegativeValues: false }
+      )
+    })
   ],
 };
