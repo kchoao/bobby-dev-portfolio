@@ -3,8 +3,12 @@ import FadeInWhenVisible from "@/components/shared/fade-in-when-visible";
 import Github from "@/components/shared/icons/github";
 import Linkedin from "@/components/shared/icons/linkedin";
 import Link from "next/link";
+import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import Balancer from "react-wrap-balancer";
+import Profile from "@/public/image/profile.jpg"
+import WebProject from "@/public/image/web-project.jpg"
+import AppProject from "@/public/image/app-project.png"
 
 
 export default function Home() {
@@ -12,8 +16,8 @@ export default function Home() {
         <>
             {/* Hero section */}
             <div className="w-full h-fit pt-16 bg-zinc-50 dark:bg-zinc-800 border-b border-slate-900">
-                <div className="mx-auto max-w-8xl py-12 lg:py-24 grid lg:grid-cols-4">
-                    <div className="lg:col-span-3">
+                <div className="mx-auto max-w-8xl py-12 lg:py-24 flex flex-col-reverse lg:flex-row gap-x-12">
+                    <div className="lg:flex-1 lg:basis-3/4">
                         <h1 className="
                         text-center lg:text-left text-3xl/relaxed lg:text-6xl/relaxed
                         from-purple-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent font-extrabold
@@ -23,7 +27,7 @@ export default function Home() {
                             </Balancer>
                         </h1>
                         <div className="text-center lg:text-left lg:text-xl mt-6">
-                            <Balancer>
+                            <Balancer ratio={0.2}>
                             As a full stack developer who is passionate about outdoor activity, 
                             I&apos;ve honed my skills to deliver innovative and engaging projects. 
                             Whether it&apos;s designing a website or building a mobile app, I&apos;ve got you covered.
@@ -53,13 +57,11 @@ export default function Home() {
                         </div>
             
                     </div>
-                    {/* <Image>
-
-                    </Image> */}
-                    <div className="h-80 lg:h-full w-1/2 lg:w-full mx-auto mt-16 lg:mt-0 bg-zinc-500 rounded-lg">
-                        {/* <div className="h-80 lg:h-full w-1/2 lg:w-full mx-auto mt-16 lg:mt-0 bg-zinc-500 rounded-lg"></div> */}
-
-                    </div>
+                    <Image
+                        className="max-w-sm mb-16 lg:mb-0 rounded-lg object-cover self-center"
+                        alt={"Profile Picture"}
+                        src={Profile}
+                    />
                 </div>
             </div>
             {/* Background section */}
@@ -96,9 +98,7 @@ export default function Home() {
                         {Projects.map((project, index)=>(
                             <div key={`project-${index}`} className="h-full w-full">
                                 {/* Image */}
-                                <div className="h-80 w-full bg-slate-700">
-
-                                </div>
+                                {project.demo}
                                 <div className="pt-6 lg:pt-12">
                                     <h3 className="text-center text-2xl lg:text-3xl font-bold">{project.title}</h3>
                                     <div className="w-full text-center pt-6">
@@ -158,11 +158,25 @@ const Skills = [
 const Projects = [
     {
         title: "Startup Website",
-        content: "Developed a fully responsive website for a startup. The site is optimized to work across all devices and platforms."
+        content: "Developed a fully responsive website for a startup. The site is optimized to work across all devices and platforms.",
+        demo: (
+            <Image
+            className="h-80 w-full mb-16 lg:mb-0 rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
+            alt={"Project picture: Startup Website"}
+            src={WebProject}
+            />
+        )
     },
     {
         title: "Mobile App Development",
-        content: "Mobile App Development"
+        content: "Mobile App Development",
+        demo: (
+            <Image
+            className="h-80 w-full mb-16 lg:mb-0 rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
+            alt={"Project picture: Mobile App Development"}
+            src={AppProject}
+            />
+        )
     },
     // {
     //     title: "E-Commerce Website",

@@ -12,14 +12,7 @@ import ThemeProvider from "@/components/provider/theme-provider";
 export const metadata = {
   title: "Bobby Ho - Developer Portfolio",
   description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
-  twitter: {
-    card: "summary_large_image",
-    title: "Precedent - Building blocks for your Next.js project",
-    description:
-      "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
-    creator: "@steventey",
-  },
+    "Do you have a job opportunity or idea you'd like to discuss? Feel free to reach me on Github and Linkedin~",
   metadataBase: new URL("https://bobby-dev-portfolio.vercel.app/"),
   themeColor: "#FFF",
 };
