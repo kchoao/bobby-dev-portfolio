@@ -15,7 +15,7 @@ export default function Home() {
     return(
         <>
             {/* Hero section */}
-            <div className="w-full h-fit px-4 pt-8 lg:pt-16 bg-zinc-50 dark:bg-zinc-800 border-b border-slate-900">
+            <div className="w-full h-fit px-4 pt-8 lg:pt-16 bg-zinc-50/80 dark:bg-zinc-800/80 border-b border-slate-900">
                 <div className="mx-auto max-w-8xl py-12 lg:py-24 flex flex-col-reverse lg:flex-row gap-x-12">
                     <div className="lg:basis-3/4">
                         <h1 className="
@@ -57,9 +57,9 @@ export default function Home() {
                         </div>
             
                     </div>
-                    <div className="lg:basis-1/4 mb-6 lg:mb-0 self-center">
+                    <div className="lg:basis-1/4 rounded-full lg:rounded-xl mb-6 lg:mb-0 self-center shadow-xl">
                         <Image
-                            className="w-full max-h-[50vh] rounded-lg object-cover"
+                            className="max-h-[40vh] lg:max-h-[50vh] max-w-[40vh] lg:max-w-[30vh] rounded-full lg:rounded-xl object-cover object-bottom"
                             alt={"Profile Picture"}
                             src={Profile}
                         />
@@ -67,7 +67,7 @@ export default function Home() {
                 </div>
             </div>
             {/* Background section */}
-            <div className="min-h-80 max-w-7xl bg-zinc-50 dark:bg-zinc-800 border border-slate-900 rounded-lg mx-2 lg:mx-auto my-12 lg:my-24 px-4 lg:px-16 py-6 lg:py-12">
+            <div className="min-h-80 max-w-7xl bg-zinc-50/80 dark:bg-zinc-800/80 border border-slate-900 rounded-lg mx-2 lg:mx-auto my-12 lg:my-24 px-4 lg:px-16 py-6 lg:py-12">
                     <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold">Skills</h1>
                     <div className="grid lg:grid-cols-2 lg:gap-6 mt-4">
                         {Skills.map((skill, index)=>(
@@ -92,7 +92,7 @@ export default function Home() {
                     </div>
             </div>
             {/* Project section */}
-            <div className="w-full bg-zinc-50 dark:bg-zinc-800 border-y border-slate-900 mb-16">
+            <div className="w-full bg-zinc-50/80 dark:bg-zinc-800/80 border-y border-slate-900 mb-16">
                 <div className="min-h-80 max-w-8xl mx-4 lg:mx-auto py-6 lg:py-12">
                     <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold mb-2 lg:mb-6">Projects</h1>
                     <h4 className="text-center lg:text-left mb-6">Some of the projects I&apos;m recently working on</h4>
@@ -115,7 +115,7 @@ export default function Home() {
                 </div>
             </div>
             {/* About this web */}
-            <div className="min-h-80 max-w-7xl bg-zinc-50 dark:bg-zinc-800 border border-slate-900 rounded-lg mx-2 lg:mx-auto my-12 lg:my-24 px-4 lg:px-16 py-6 lg:py-12">
+            <div className="min-h-80 max-w-7xl bg-zinc-50/80 dark:bg-zinc-800/80 border border-slate-900 rounded-lg mx-2 lg:mx-auto my-12 lg:my-24 px-4 lg:px-16 py-6 lg:py-12">
                     <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold">About this website</h1>
                     <div className="flex h-60 items-center justify-center">
                         <WebVitals/>
