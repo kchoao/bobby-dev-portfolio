@@ -21,7 +21,7 @@ export default function Home() {
     return(
         <>
             {/* Hero section */}
-            <div className="h-fit w-full pt-12 lg:py-12 bg-neutral-100 dark:bg-neutral-800">
+            <div id="about" className="h-fit w-full pt-12 lg:py-12 bg-neutral-100 dark:bg-neutral-800">
                 <div className="mx-auto max-w-7xl px-4 py-12 lg:py-24 flex flex-col-reverse lg:flex-row gap-x-12">
                     <div className="self-center lg:basis-3/4">
                         {/* <h1 className="
@@ -80,7 +80,7 @@ export default function Home() {
             {/* Tech Stack section */}
             <div className="max-w-6xl mx-auto my-12 lg:my-24 px-4 lg:px-2 py-2">
                 <div className="lg:hidden text-center text-2xl font-bold mb-12">
-                    <p className="inline border-b pb-2">
+                    <p className="inline border-b-2 border-zinc-700 dark:border-zinc-50 pb-1">
                         Tech Stack
                     </p>
                 </div>
@@ -95,8 +95,8 @@ export default function Home() {
                     <Expressjs className="h-16 w-24 dark:fill-neutral-100"/>
                 </div>
             </div>
-            {/* Background section */}
-            <div className="min-h-80 bg-neutral-100 dark:bg-neutral-800 py-12 lg:py-24 px-4">
+            {/* Skills section */}
+            <div id="skills" className="min-h-80 bg-neutral-100 dark:bg-neutral-800 py-12 lg:py-24 px-4">
                 <div className="max-w-7xl mx-2 lg:mx-auto">
                     <h1 className="text-center lg:text-left text-2xl/relaxed lg:text-5xl/relaxed font-bold">
                         Skills<span role="img" aria-label="direct hit emoji"> 🎯</span>
@@ -121,7 +121,7 @@ export default function Home() {
                 </div>
             </div>
             {/* Project section */}
-            <div className="h-fit w-full">
+            <div id="projects" className="h-fit w-full">
                 <div className="mx-auto max-w-7xl px-4 py-12 lg:py-24">
                     <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold mb-2 lg:mb-6">
                         Projects<span role="img" aria-label="hatching chick emoji">🐣</span>
@@ -162,7 +162,7 @@ export default function Home() {
                 </div>
             </div>
             {/* About this web */}
-            <div className="h-fit bg-neutral-100 dark:bg-neutral-800 py-12 lg:py-24">
+            <div id="this-site" className="h-fit bg-neutral-100 dark:bg-neutral-800 py-12 lg:py-24">
                 <div className="max-w-7xl mx-4 lg:mx-auto">
                     <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold">
                         About this website<span role="img" aria-label="sunshine emoji">🌞</span>

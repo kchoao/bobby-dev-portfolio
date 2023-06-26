@@ -1,9 +1,9 @@
 export default function Footer() {
   return (
-    <div className="relative bottom-0 h-fit w-full py-6 text-center bg-zinc-50/50 dark:bg-zinc-800/50">
+    <div id="contact" className="relative bottom-0 h-fit w-full py-6 text-center bg-neutral-100/50 dark:bg-neutral-800/50">
       <div className="max-w-8xl mx-4 lg:mx-auto my-6">
         <h1 className="animate-bounce text-3xl lg:text-4xl font-bold mb-6">Get in touch</h1>
-        <h4 className="inline-block pb-6 border-b border-zinc-800 dark:border-zinc-100">
+        <h4 className="inline-block pb-6 border-b border-neutral-800 dark:border-neutral-100">
           Do you have a job opportunity or idea you&apos;d like to discuss? Feel free to reach me on {" "}
           <a
             className="font-medium underline transition-colors"
@@ -26,7 +26,7 @@ export default function Footer() {
         </h4>
       </div>
       <p>Build with TypeScript, Tailwind and Next.js</p>
-      <p className="mt-2z-10">
+      <p className="mt-2">
         Portfolio of Bobby Ho
       </p>
     </div>

@@ -23,10 +23,11 @@ const ThemeSwitcher = () => {
     return (
         <>
             <DarkModeSwitch
-                // style={{ marginBottom: '2rem' }}
+                moonColor={"#FAFAFA"}
+                sunColor={"#27272A"}
                 checked={isDarkMode}
                 onChange={toggleDarkMode}
-                size={'2rem'}
+                size={'1.5rem'}
             />
         </>
     );
