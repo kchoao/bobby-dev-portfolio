@@ -18,8 +18,9 @@ module.exports = {
         '9xl': '96rem',
       },
       fontFamily: {
-        display: ["var(--font-sf)", "system-ui", "sans-serif"],
-        default: ["var(--font-inter)", "system-ui", "sans-serif"],
+        display: ["var(--font-poppins)", "sans-serif", "system-ui"],
+        default: ["var(--font-roboto_mono)", "sans-serif", "system-ui"],
+        hero: ["var(--font-staatliches)", "sans-serif", "system-ui"],
       },
       animation: {
         // Fade up and down

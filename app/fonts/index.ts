@@ -1,12 +1,18 @@
-import localFont from "next/font/local";
-import { Inter } from "next/font/google";
+import { Poppins, Roboto_Mono, Staatliches  } from "next/font/google";
 
-export const sfPro = localFont({
-  src: "./SF-Pro-Display-Medium.otf",
-  variable: "--font-sf",
+export const poppins = Poppins({
+  weight: "300",
+  variable: "--font-poppins",
+  subsets: ["latin"],
 });
 
-export const inter = Inter({
-  variable: "--font-inter",
+export const robotoMono = Roboto_Mono({
+  weight: "300",
+  variable: "--font-roboto_mono",
+  subsets: ["latin"],
+});
+export const staatliches = Staatliches({
+  weight: "400",
+  variable: "--font-staatliches",
   subsets: ["latin"],
 });

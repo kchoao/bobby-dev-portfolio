@@ -13,5 +13,11 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
         return <>{children}</>;
     }
 
-    return <NextThemeProvider attribute="class">{children}</NextThemeProvider>;
+    return (
+    <NextThemeProvider 
+        // enableSystem={false} 
+        defaultTheme={'dark'}
+        attribute="class">
+        {children}
+    </NextThemeProvider>);
 }

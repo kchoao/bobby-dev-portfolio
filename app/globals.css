@@ -1,3 +1,88 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.fi{
+    background-size: cover !important;
+
+}
+.animated-background  {
+    background-image: url(../public/image/alps.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    -webkit-animation: slidein-mobile 120s;
+    animation: slidein-mobile 120s;
+
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;              
+}
+
+@media only screen and (min-width: 1024px) {
+    .animated-background{
+        background-image: url(../public/image/athens.webp);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        -webkit-animation: slidein-1024 120s;
+        animation: slidein-1024 120s;
+    
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+    
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+    }
+}
+
+@keyframes slidein-1024 {
+    from {background-position: right;background-size:2250px; }
+    to {background-position: left top;background-size:2550px;}
+}
+
+@keyframes slidein-mobile {
+    from {background-position: right top;background-size:600px; }
+    to {background-position: left top;background-size:800px;}
+}
+
+.image-frame{
+    -webkit-animation: morph 7s ease-in-out infinite;
+    animation: morph 7s ease-in-out infinite;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes morph {
+    0% {
+        border-radius: 60% 80% 70% 55% / 95% 60% 45% 65%;
+    }
+
+    50% {
+        border-radius: 85% 65% 55% 70% / 70% 85% 50% 40%;
+    }
+
+    100% {
+        border-radius: 60% 80% 70% 55% / 95% 60% 45% 65%;
+    }
+}
+/* @keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+} */

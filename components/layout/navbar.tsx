@@ -22,7 +22,7 @@ export default function NavBar({ session }: { session: Session | null }) {
             : "bg-zinc-50/0 dark:bg-zinc-800/0"
         } z-30 transition-all`}
       >
-        <div className="flex h-16 max-w-8xl pl-3 items-center justify-between mx-4 lg:mx-auto">
+        <div className="flex h-16 max-w-8xl px-4 items-center justify-between lg:mx-auto">
           <Link href="/" className="flex items-center font-display text-2xl">
             <p>Bobby Ho</p>
           </Link>

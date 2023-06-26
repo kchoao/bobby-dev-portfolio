@@ -6,82 +6,110 @@ import Link from "next/link";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import Balancer from "react-wrap-balancer";
-import Profile from "@/public/image/profile.jpg"
+import Me from "@/public/image/me.webp"
 import WebProject from "@/public/image/web-project.jpg"
 import AppProject from "@/public/image/app-project.png"
+import Nextjs from "@/components/shared/icons/nextjs";
+import React from "@/components/shared/icons/react";
+import Typescript from "@/components/shared/icons/typescript";
+import Tailwind from "@/components/shared/icons/tailwind";
+import Nodejs from "@/components/shared/icons/nodejs";
+import Expressjs from "@/components/shared/icons/expressjs";
 
 
 export default function Home() {
     return(
         <>
             {/* Hero section */}
-            <div className="w-full h-fit px-4 pt-8 lg:pt-16 bg-zinc-50/80 dark:bg-zinc-800/80 border-b border-slate-900">
-                <div className="mx-auto max-w-8xl py-12 lg:py-24 flex flex-col-reverse lg:flex-row gap-x-12">
-                    <div className="lg:basis-3/4">
-                        <h1 className="
+            <div className="h-fit w-full pt-12 lg:py-12 bg-neutral-100 dark:bg-neutral-800">
+                <div className="mx-auto max-w-7xl px-4 py-12 lg:py-24 flex flex-col-reverse lg:flex-row gap-x-12">
+                    <div className="self-center lg:basis-3/4">
+                        {/* <h1 className="
                         text-center lg:text-left text-2xl/relaxed lg:text-6xl/relaxed
                         from-purple-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent font-extrabold
+                        "> */}
+                        <h1 className="
+                        text-center font-hero lg:text-left text-2xl/relaxed lg:text-8xl/relaxed text-amber-500 dark:text-amber-400  tracking-wider font-extrabold
                         ">
-                            <Balancer ratio={0.2}>
-                            Hello! I&apos;m Bobby, a developer based in Hong Kong.
+                            <Balancer >
+                            Full-Stack React Developer <span role="img" aria-label="rocket emoji">🚀</span>
                             </Balancer>
                         </h1>
-                        <div className="text-center lg:text-left lg:text-xl mt-6">
-                            <Balancer ratio={0.2}>
-                            As a full stack developer who is passionate about outdoor activity, 
-                            I&apos;ve honed my skills to deliver innovative and engaging projects. 
-                            Whether it&apos;s designing a website or building a mobile app, I&apos;ve got you covered.
+                        <div className="text-center lg:text-left lg:text-2xl/relaxed mt-6">
+                            <Balancer ratio={0.5}>
+                                Hello! I&apos;m Bobby Ho. A passionate Full-stack React Developer from Hong Kong 
+                                {/* <span className={`fi fi-hk border border-black object-cover`}/> who love exploring nature and learning new things  */}
+                                <span role="img" aria-label="fire emoji"> 🔥</span>
                             </Balancer>
                         </div>
-                        <div className="mt-6 lg:mt-12 flex space-x-5 justify-center lg:justify-start">
+                        <div className="mt-6 lg:mt-12 flex space-x-8 justify-center lg:justify-start">
                             <Link
-                                className="group flex max-w-fit items-center justify-center space-x-2 rounded-xl border border-black bg-black px-3 lg:px-6 py-2 text-white transition-all shadow-md hover:-translate-y-2 duration-150"
+                                className=""
                                 href={"https://www.linkedin.com/in/bobby-ho-dev/"}
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Linkedin className="fill-cyan-400"/>
-                                <div>View Linkedin</div>
+                                <Linkedin className="h-8 fill-neutral-700 dark:fill-neutral-300 hover:-translate-y-2 duration-200 transition-all"/>
                             </Link>
                             <Link
-                                className="flex max-w-fit items-center justify-center space-x-2 rounded-xl border border-gray-300 bg-white px-3 lg:px-6 py-2 text-gray-600 shadow-md transition-all hover:-translate-y-2 duration-150"
+                                className=""
                                 href="https://github.com/kchoao"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <Github />
-                                <div>
-                                View Github
-                                </div>
+                                <Github className="h-8 fill-neutral-700 dark:fill-neutral-300 hover:-translate-y-2 duration-200 transition-all"/>
                             </Link>
                         </div>
-            
+                        
                     </div>
-                    <div className="lg:basis-1/4 rounded-full lg:rounded-xl mb-6 lg:mb-0 self-center shadow-xl">
+                    <div className="lg:basis-1/4 max-h-[40vh] lg:max-h-[50vh] max-w-[40vh] lg:max-w-[30vh] mb-6 lg:mb-0 self-center">
                         <Image
-                            className="max-h-[40vh] lg:max-h-[50vh] max-w-[40vh] lg:max-w-[30vh] rounded-full lg:rounded-xl object-cover object-bottom"
+                            className="
+                            max-h-[40vh] lg:max-h-[50vh] max-w-[40vh] lg:max-w-[30vh] rounded-full object-cover object-bottom 
+                            
+                            image-frame"
                             alt={"Profile Picture"}
-                            src={Profile}
+                            src={Me}
                         />
+                        {/* <div className="hero-image">
+
+                        </div> */}
                     </div>
                 </div>
             </div>
+            {/* Tech Stack section */}
+            <div className="max-w-6xl mx-auto my-12 lg:my-24 px-4 lg:px-2 py-2">
+                <div className="lg:hidden text-center text-2xl font-bold mb-12">
+                    <p className="inline border-b pb-2">
+                        Tech Stack
+                    </p>
+                </div>
+                <div className="grid grid-cols-3 gap-4 justify-items-center lg:flex lg:justify-between items-center">
+                    <p className="hidden lg:block lg:text-2xl/relaxed font-bold">Tech Stack</p>
+                    <p className="hidden lg:block text-3xl/relaxed font-bold">|</p>
+                    <Nextjs className="h-14"/>
+                    <React className="h-12"/>
+                    <Typescript className="h-12"/>
+                    <Tailwind className="h-12 w-12"/>
+                    <Nodejs className="h-20 w-20 dark:fill-neutral-100"/>
+                    <Expressjs className="h-16 w-24 dark:fill-neutral-100"/>
+                </div>
+            </div>
             {/* Background section */}
-            <div className="min-h-80 max-w-7xl bg-zinc-50/80 dark:bg-zinc-800/80 border border-slate-900 rounded-lg mx-2 lg:mx-auto my-12 lg:my-24 px-4 lg:px-16 py-6 lg:py-12">
-                    <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold">Skills</h1>
-                    <div className="grid lg:grid-cols-2 lg:gap-6 mt-4">
+            <div className="min-h-80 bg-neutral-100 dark:bg-neutral-800 py-12 lg:py-24 px-4">
+                <div className="max-w-7xl mx-2 lg:mx-auto">
+                    <h1 className="text-center lg:text-left text-2xl/relaxed lg:text-5xl/relaxed font-bold">
+                        Skills<span role="img" aria-label="direct hit emoji"> 🎯</span>
+                    </h1>
+                    <div className="grid lg:grid-cols-2 gap-10 mt-8 lg:mt-12">
                         {Skills.map((skill, index)=>(
-                            <div key={`skill-${index}`}  className="flex gap-2 lg:gap-6 py-4 lg:py-6">
-                                <FadeInWhenVisible delay={(index+1)/10} className="h-12 w-12 lg:h-16 lg:w-16 p-1 text-xl lg:text-3xl text-center font-extrabold text-transparent bg-clip-border from-purple-600 to-rose-400  bg-gradient-to-r rounded-xl">
-                                    <div className="rounded-lg h-full w-full bg-zinc-50 dark:bg-zinc-800">
-                                        <div className="py-2 lg:py-3 text-transparent bg-clip-text from-rose-400 via-fuchsia-500 to-indigo-500 bg-gradient-to-r">
-                                            {index+1}
-                                        </div>
-                                    </div>
+                            <div key={`skill-${index}`} className="flex gap-6 lg:gap-8">
+                                <FadeInWhenVisible delay={(index+1)/10} className="h-12 w-12 lg:h-16 lg:w-16 p-2 lg:p-3 text-xl lg:text-2xl text-center font-bold border-[3px] border-zinc-300 dark:border-zinc-600 rounded-xl">
+                                    {index+1}
                                 </FadeInWhenVisible>
                                 <div className="flex-1">
-                                    <h3 className="h-12 lg:h-16 py-3 lg:py-4 text-center lg:text-left text-xl lg:text-3xl font-bold">{skill.title}</h3>
-                                    <div className="w-full text-center lg:text-left pt-6">
+                                    <h3 className="h-12 lg:h-16 py-3 lg:py-4 text-left text-xl lg:text-3xl font-bold">{skill.title}</h3>
+                                    <div className="w-full text-left pt-3 lg:pt-6">
                                         <Balancer ratio={0.2}>
                                         {skill.content}
                                         </Balancer>
@@ -90,24 +118,43 @@ export default function Home() {
                             </div>
                         ))}
                     </div>
+                </div>
             </div>
             {/* Project section */}
-            <div className="w-full bg-zinc-50/80 dark:bg-zinc-800/80 border-y border-slate-900 mb-16">
-                <div className="min-h-80 max-w-8xl mx-4 lg:mx-auto py-6 lg:py-12">
-                    <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold mb-2 lg:mb-6">Projects</h1>
+            <div className="h-fit w-full">
+                <div className="mx-auto max-w-7xl px-4 py-12 lg:py-24">
+                    <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold mb-2 lg:mb-6">
+                        Projects<span role="img" aria-label="hatching chick emoji">🐣</span>
+                    </h1>
                     <h4 className="text-center lg:text-left mb-6">Some of the projects I&apos;m recently working on</h4>
-                    <div className="grid lg:grid-cols-2 gap-6">
+                    <div className="">
                         {Projects.map((project, index)=>(
-                            <div key={`project-${index}`} className="h-full w-full">
-                                {/* Image */}
-                                {project.demo}
-                                <div className="pt-6 lg:pt-12 pb-6 lg:pb-0">
-                                    <h3 className="text-center text-xl lg:text-3xl font-bold">{project.title}</h3>
-                                    <div className="w-full text-center pt-2 lg:pt-6">
+                            <div key={`project-${index}`} className="lg:flex odd:flex-row even:flex-row-reverse gap-8 mt-12">
+                                <div className="lg:w-3/5">
+                                    <Image
+                                        className="h-80 w-full rounded-xl object-cover"
+                                        alt={project.alt}
+                                        src={project.src}
+                                    />
+                                </div>
+                                {/* {project.demo} */}
+                                <div className="lg:w-2/5 space-y-6 self-center mt-8 lg:mt-0">
+                                    <h3 className="text-center text-lg lg:text-xl font-bold">{project.title}</h3>
+                                    <div className="w-full text-center">
                                         <Balancer ratio={0.2}>
                                         {project.content}
                                         </Balancer>
                                     </div>
+                                    <div className="flex flex-wrap gap-2 justify-center">
+                                        {project.stacks.map((stack, y)=>(
+                                            <div key={`project-${index}-${y}`} className="inline-block px-2 py-1 rounded-md border border-neutral-800 dark:border-neutral-100">
+                                                {stack}
+                                            </div>
+                                        ))}
+                                    </div>
+                                    {/* <div className="flex flex-wrap gap-2 justify-center">
+
+                                    </div> */}
                                 </div>
                             </div>
                         ))}
@@ -115,8 +162,11 @@ export default function Home() {
                 </div>
             </div>
             {/* About this web */}
-            <div className="min-h-80 max-w-7xl bg-zinc-50/80 dark:bg-zinc-800/80 border border-slate-900 rounded-lg mx-2 lg:mx-auto my-12 lg:my-24 px-4 lg:px-16 py-6 lg:py-12">
-                    <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold">About this website</h1>
+            <div className="h-fit bg-neutral-100 dark:bg-neutral-800 py-12 lg:py-24">
+                <div className="max-w-7xl mx-4 lg:mx-auto">
+                    <h1 className="text-center lg:text-left text-2xl lg:text-5xl font-bold">
+                        About this website<span role="img" aria-label="sunshine emoji">🌞</span>
+                    </h1>
                     <div className="flex h-60 items-center justify-center">
                         <WebVitals/>
                     </div>
@@ -124,14 +174,15 @@ export default function Home() {
                         <h2 className="text-2xl font-bold lg:text-3xl">
                         <Balancer>Performance first</Balancer>
                         </h2>
-                        <div className="prose-lg -mt-2  text-gray-500 dark:text-zinc-50 lg:prose">
-                        <Balancer>
-                            <ReactMarkdown>
-                                Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.
-                            </ReactMarkdown>
-                        </Balancer>
+                        <div className="prose-lg -mt-2 text-gray-500 dark:text-gray-50 lg:prose">
+                            <Balancer>
+                                <ReactMarkdown>
+                                    Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.
+                                </ReactMarkdown>
+                            </Balancer>
                         </div>
                     </div>
+                </div>
             </div>
         </>
     )
@@ -161,24 +212,30 @@ const Projects = [
     {
         title: "Startup Website",
         content: "Developed a fully responsive website for a startup. The site is optimized to work across all devices and platforms.",
+        alt:"Project picture: Startup Website",
+        src: WebProject,
         demo: (
             <Image
-            className="h-80 w-full rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
+            className="h-80 flex-1 rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
             alt={"Project picture: Startup Website"}
             src={WebProject}
             />
-        )
+        ),
+        stacks: ["Nextjs", "Sanity CMS", "Shopify","Responsive Design"]
     },
     {
         title: "Mobile App Development",
         content: "Mobile App Development",
+        alt:"Project picture: Mobile App Development",
+        src: AppProject,
         demo: (
             <Image
-            className="h-80 w-full rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
+            className="h-80 flex-1 rounded-lg object-cover self-center border-2 border-gray-800 dark:border-gray-300"
             alt={"Project picture: Mobile App Development"}
             src={AppProject}
             />
-        )
+        ),
+        stacks: ["Flutter", "Database", "Dart"]
     },
     // {
     //     title: "E-Commerce Website",
