@@ -6,8 +6,8 @@ export default function Footer() {
 
   return (
     <div id="contact" className="relative bottom-0 h-fit w-full py-6 text-center bg-neutral-100/50 dark:bg-neutral-800/50">
-      <div className="max-w-8xl mx-4 lg:mx-auto my-6">
-        <h1 className="text-3xl lg:text-4xl font-bold mb-6">                           
+      <div className="max-w-8xl mx-4 lg:mx-auto space-y-6 my-6">
+        <h1 className="text-3xl lg:text-4xl font-bold">                           
           {tContact.rich('title', {
             emoji: (t) => (
             <a 
@@ -43,9 +43,9 @@ export default function Footer() {
           })}
         </h4>
       </div>
-      <p>Build with TypeScript, Tailwind and Next.js</p>
-      <p className="mt-2">
-        Portfolio of Bobby Ho
+      <p className="text-sm">Build with TypeScript, Tailwind and Next.js</p>
+      <p className="mt-2 text-sm">
+        Copyright © 2023. All rights are reserved
       </p>
     </div>
   );

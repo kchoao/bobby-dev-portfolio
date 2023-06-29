@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
-import { Session } from "next-auth";
 import ThemeSwitcher from "./theme-switcher";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -10,20 +9,13 @@ import { i18n } from '@/lib/constants';
 import { navbarContext } from "@/app/[locale]/context";
 import { useLocale, useTranslations } from "next-intl";
 
-
-
-type NavbarProps = {
-  session?: Session | null
-}
-
-
-export default function Navbar({ session }: NavbarProps) {
+export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const closeMobileMenu = () => setMobileMenuOpen(false)
   const locale = useLocale();
   const scrolled = useScroll(50);
   const t = useTranslations('navbar');
-  
+
   return (
     <>
       {/* Backdrop */}
@@ -63,7 +55,7 @@ export default function Navbar({ session }: NavbarProps) {
         }`}
       >
         <div className="flex h-16 max-w-8xl px-4 text-center  items-center justify-between lg:mx-auto">
-          <Link href="#about" className="text-xl hover:-translate-y-2 duration-300 transition-transform" aria-label={"Bobby Ho"} scroll={false}>
+          <Link href={`${locale}/#about`} className="text-xl hover:-translate-y-2 duration-300 transition-transform" aria-label={"Bobby Ho"} scroll={false}>
             <p>Bobby Ho</p>
           </Link>
           <div className="flex gap-6 text-lg items-center">

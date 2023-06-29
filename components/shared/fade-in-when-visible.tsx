@@ -19,7 +19,7 @@ export default function FadeInWhenVisible({
     viewport = {
         once:true
     },
-    delay = 0,
+    delay = 2,
     transition = {
         duration: 0.2 ,
         staggerChildren: 0.3

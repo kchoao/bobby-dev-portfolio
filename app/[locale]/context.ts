@@ -1,5 +1,5 @@
-import WebProject from "@/public/image/web-project.jpg"
-import AppProject from "@/public/image/app-project.png"
+import WebProject from "@/public/image/web-project.webp"
+import AppProject from "@/public/image/app-project.webp"
 
 export const navbarContext = {
     routes : [
@@ -30,6 +30,7 @@ export const navbarContext = {
 }
 export const linkedinUrl = "https://www.linkedin.com/in/bobby-ho-dev/"
 export const githubUrl = "https://github.com/kchoao"
+export const webUrl = "https://bobbyho.vercel.app/"
 
 export const mainContext = {
     experience: [

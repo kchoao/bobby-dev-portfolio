@@ -1,18 +1,20 @@
 import WebVitals from "@/components/home/web-vitals";
 import FadeInWhenVisible from "@/components/shared/fade-in-when-visible";
-import Github from "@/components/shared/icons/github";
-import Linkedin from "@/components/shared/icons/linkedin";
 import Link from "next/link";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
 import Balancer from "react-wrap-balancer";
 import Me from "@/public/image/me.webp"
-import Nextjs from "@/components/shared/icons/nextjs";
-import React from "@/components/shared/icons/react";
-import Typescript from "@/components/shared/icons/typescript";
-import Tailwind from "@/components/shared/icons/tailwind";
-import Nodejs from "@/components/shared/icons/nodejs";
-import Expressjs from "@/components/shared/icons/expressjs";
+import {
+    Github,
+    Linkedin,
+    Nextjs, 
+    React, 
+    Typescript, 
+    Tailwind, 
+    Nodejs, 
+    Expressjs
+} from "@/components/shared/icons"
 import { useTranslations } from "next-intl";
 import { githubUrl, linkedinUrl, mainContext } from "./context";
 
@@ -84,7 +86,7 @@ export default function Home() {
             {/* Tech Stack section */}
             <div className="max-w-6xl mx-auto my-12 lg:my-24 px-4 lg:px-2 py-2">
                 <div className="lg:hidden text-center text-2xl font-bold mb-12">
-                    <p className="inline border-b-2 border-zinc-700 dark:border-zinc-50 pb-1">
+                    <p className="inline pb-1">
                         {tStack("title")}
                     </p>
                 </div>
@@ -110,8 +112,10 @@ export default function Home() {
                     <div className="grid lg:grid-cols-2 gap-10 mt-8 lg:mt-12">
                         {mainContext.experience.map((experience, index)=>(
                             <div key={`experience-${index}`} className="flex gap-6 lg:gap-8">
-                                <FadeInWhenVisible delay={(index+1)/10} className="h-12 w-12 lg:h-16 lg:w-16 p-2 lg:p-3 text-xl lg:text-2xl text-center font-bold border-[3px] border-zinc-300 dark:border-zinc-600 rounded-xl">
-                                    {index+1}
+                                <FadeInWhenVisible delay={0.5+(index+1)/10} >
+                                    <div className="h-12 w-12 lg:h-16 lg:w-16 p-2 lg:p-3 text-xl lg:text-2xl text-center font-bold border-[3px] border-zinc-300 dark:border-zinc-600 rounded-xl">
+                                        {index+1}
+                                    </div>
                                 </FadeInWhenVisible>
                                 <div className="flex-1">
                                     <h3 className="h-12 lg:h-16 py-3 lg:py-4 text-left text-xl lg:text-3xl font-bold">{tExperience(experience.title)}</h3>
@@ -180,9 +184,28 @@ export default function Home() {
                         <h2 className="text-2xl font-bold lg:text-3xl">
                         <Balancer>{tThisSite("subtitle")}</Balancer>
                         </h2>
-                        <div className="prose-lg -mt-2 text-gray-500 dark:text-gray-50 lg:prose">
+                        <div className="prose-lg -mt-2 text-gray-800 dark:text-gray-50 lg:prose">
                             <Balancer>
-                                <ReactMarkdown>
+                            <ReactMarkdown
+                                components={{
+                                    a: ({ node, ...props }) => (
+                                    <a
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        {...props}
+                                        className="font-medium text-gray-800 dark:text-gray-50 underline"
+                                    />
+                                    ),
+                                    code: ({ node, ...props }) => (
+                                    <code
+                                        {...props}
+                                        // @ts-ignore (to fix "Received `true` for a non-boolean attribute `inline`." warning)
+                                        inline="true"
+                                        className="rounded-sm bg-gray-300 dark:bg-gray-100 text-gray-800 px-1 py-0.5 font-mono font-medium"
+                                    />
+                                    ),
+                                }}
+                                >
                                     {tThisSite("content")}
                                 </ReactMarkdown>
                             </Balancer>
