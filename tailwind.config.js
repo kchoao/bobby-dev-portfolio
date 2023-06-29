@@ -19,7 +19,6 @@ module.exports = {
       },
       fontFamily: {
         display: ["var(--font-poppins)", "sans-serif", "system-ui"],
-        default: ["var(--font-roboto_mono)", "sans-serif", "system-ui"],
         hero: ["var(--font-staatliches)", "sans-serif", "system-ui"],
       },
       animation: {

@@ -7,10 +7,11 @@ export default function Footer() {
   return (
     <div id="contact" className="relative bottom-0 h-fit w-full py-6 text-center bg-neutral-100/50 dark:bg-neutral-800/50">
       <div className="max-w-8xl mx-4 lg:mx-auto space-y-6 my-6">
-        <h1 className="text-3xl lg:text-4xl font-bold">                           
+        <h2 className="text-3xl lg:text-4xl font-bold">                           
           {tContact.rich('title', {
             emoji: (t) => (
             <a 
+              aria-label="Easter Egg secret Youtube link"
               href={"https://youtu.be/Uq9QTPHYxSo?t=20"}
               target="_blank"
               rel="noopener noreferrer"
@@ -18,11 +19,12 @@ export default function Footer() {
               <span className="animate-bounce inline-block" role="img" aria-label="mage emoji">{t}</span>
             </a>)
           })}
-        </h1>
-        <h4 className="inline-block pb-6 border-b border-neutral-800 dark:border-neutral-100">
+        </h2>
+        <h3 className="inline-block pb-6 border-b border-neutral-800 dark:border-neutral-100">
           {tContact.rich('content', {
             githubUrl: (t) => (
               <a 
+              aria-label="Github Link"
               className="font-medium underline transition-colors"
               href={githubUrl}
               target="_blank"
@@ -32,6 +34,7 @@ export default function Footer() {
               </a>),
             linkedinUrl: (t) => (
               <a 
+              aria-label="Linkedin Link"
               className="font-medium underline transition-colors"
               href={linkedinUrl}
               target="_blank"
@@ -41,7 +44,7 @@ export default function Footer() {
               </a>),
             
           })}
-        </h4>
+        </h3>
       </div>
       <p className="text-sm">Build with TypeScript, Tailwind and Next.js</p>
       <p className="mt-2 text-sm">

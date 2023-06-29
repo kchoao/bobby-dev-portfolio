@@ -6,11 +6,6 @@ export const poppins = Poppins({
   subsets: ["latin"],
 });
 
-export const robotoMono = Roboto_Mono({
-  weight: "300",
-  variable: "--font-roboto_mono",
-  subsets: ["latin"],
-});
 export const staatliches = Staatliches({
   weight: "400",
   variable: "--font-staatliches",

@@ -55,7 +55,7 @@ export default function Navbar() {
         }`}
       >
         <div className="flex h-16 max-w-8xl px-4 text-center  items-center justify-between lg:mx-auto">
-          <Link href={`${locale}/#about`} className="text-xl hover:-translate-y-2 duration-300 transition-transform" aria-label={"Bobby Ho"} scroll={false}>
+          <Link href={`${locale}/#about`} className="text-xl hover:-translate-y-2 duration-300 transition-transform" aria-label={"Link to home page"} scroll={false}>
             <p>Bobby Ho</p>
           </Link>
           <div className="flex gap-6 text-lg items-center">

@@ -1,7 +1,7 @@
 import "../globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
-import { poppins, robotoMono, staatliches } from "../fonts";
+import { poppins, staatliches } from "../fonts";
 import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
@@ -36,8 +36,7 @@ export default function RootLayout({
 
   return (
     <html lang={locale||"en"} suppressHydrationWarning>
-      {/* cx(poppins.variable, robotoMono.variable, staatliches.variable, */}
-        <body className={cx(poppins.variable, robotoMono.variable, staatliches.variable,"relative text-zinc-800 dark:text-zinc-50 font-display")}>
+        <body className={cx(poppins.variable, staatliches.variable,"relative text-zinc-800 dark:text-zinc-50 font-display")}>
             <ThemeProvider> 
                 <Suspense fallback={"..."}>
                   {/* @ts-expect-error Server Component */}
