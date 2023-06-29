@@ -1,4 +1,5 @@
 import "../globals.css";
+import { Metadata } from 'next'
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { poppins, staatliches } from "../fonts";
@@ -7,7 +8,7 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import ThemeProvider from "@/components/provider/theme-provider";
 import { webUrl } from "./context";
-import { alt, contentType, size } from "../opengraph-image";
+import { i18n } from "@/lib/constants"
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -16,18 +17,18 @@ type LayoutProps = {
   }
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Bobby Ho - Developer Portfolio",
   description:
     "Do you have a job opportunity or idea you'd like to discuss? Feel free to reach me on Github and Linkedin~",
   metadataBase: new URL(webUrl),
   alternates: {
-    canonical: '/',
+    canonical: `/${i18n.defaultLocale}`,
     languages: {
-      'en-UK': '/en-UK',
-      'en-US': '/en-UK',
-      'zh-HK': '/zh-HK',
-      'zh-tw': '/zh-HK',
+      'en': '/en-UK',
+      'ca': '/en-UK',
+      'zh': '/zh-HK',
+      'tw': '/zh-HK',
     },
   },
   openGraph: {
@@ -49,17 +50,6 @@ export default function RootLayout({
 
   return (
     <html lang={locale||"en"} suppressHydrationWarning>
-        <head>
-          <meta property="og:image" content={`${webUrl}/opengraph-image`} />
-          <meta property="og:image:alt" content={alt} />
-          <meta property="og:image:type" content={contentType} />
-          <meta property="og:image:width" content={`${size.width}`} />
-          <meta property="og:image:height" content={`${size.height}`} />
-          <meta name="twitter:image" content={`${webUrl}/opengraph-image`} />
-          <meta name="twitter:image:type" content={contentType} />
-          <meta name="twitter:image:width" content={`${size.width}`} />
-          <meta name="twitter:image:height" content={`${size.height}`} />
-        </head>
         <body className={cx(poppins.variable, staatliches.variable,"relative text-zinc-800 dark:text-zinc-50 font-display")}>
             <ThemeProvider> 
                 <Suspense fallback={"..."}>

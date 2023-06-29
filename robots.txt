@@ -1,4 +1,0 @@
-Sitemap: https://bobbyho.vercel.app/sitemap.xml
-
-User-agent: *
-Allow: /
