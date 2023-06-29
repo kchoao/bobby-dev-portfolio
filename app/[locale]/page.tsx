@@ -50,6 +50,7 @@ export default function Home() {
                         </h2>
                         <div className="mt-6 lg:mt-12 flex space-x-8 justify-center lg:justify-start">
                             <Link
+                                hrefLang="en"
                                 aria-label="Linkedin Link"
                                 href={linkedinUrl}
                                 target="_blank"
@@ -58,6 +59,7 @@ export default function Home() {
                                 <Linkedin className="h-8 fill-neutral-700 dark:fill-neutral-300 hover:-translate-y-2 duration-200 transition-all"/>
                             </Link>
                             <Link
+                                hrefLang="en"
                                 aria-label="Github Link"
                                 href={githubUrl}
                                 target="_blank"

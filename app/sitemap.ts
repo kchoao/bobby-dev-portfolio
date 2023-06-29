@@ -1,12 +1,14 @@
-import { MetadataRoute } from "next";
-import { webUrl } from "./[locale]/context";
+import { MetadataRoute } from 'next'
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-
-  return [
-    {
-      url: webUrl,
-      lastModified: new Date(),
-    },
-  ];
+export default function sitemap(): MetadataRoute.Sitemap {
+    return [
+        {
+            url: 'https://bobbyho.vercel.app/en-UK',
+            lastModified: new Date(),
+        },
+        {
+            url: 'https://bobbyho.vercel.app/zh-HK',
+            lastModified: new Date(),
+        },
+    ]
 }

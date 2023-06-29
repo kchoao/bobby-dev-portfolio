@@ -33,6 +33,7 @@ export default function Navbar() {
         <div className="text-right space-y-6 my-12">
             {navbarContext.routes.map((route, index) => (
             <Link
+                hrefLang="x-default"
                 key={`navigation-mobile-${index}`}
                 href={`${locale}/${route.href}`} 
                 aria-label={t(route.title)} 
@@ -55,12 +56,18 @@ export default function Navbar() {
         }`}
       >
         <div className="flex h-16 max-w-8xl px-4 text-center  items-center justify-between lg:mx-auto">
-          <Link href={`${locale}/#about`} className="text-xl hover:-translate-y-2 duration-300 transition-transform" aria-label={"Link to home page"} scroll={false}>
+          <Link 
+            href={`${locale}/#about`} 
+            className="text-xl hover:-translate-y-2 duration-300 transition-transform" 
+            aria-label={"Link to home page"} 
+            hrefLang="x-default" 
+            scroll={false}>
             <p>Bobby Ho</p>
           </Link>
           <div className="flex gap-6 text-lg items-center">
             {navbarContext.routes.map((route, index)=>(
               <Link 
+              hrefLang="x-default"
               key={`navigation-${index}`} 
               className="hidden lg:block hover:-translate-y-2 duration-300 transition-transform" 
               href={`${locale}/${route.href}`} 
@@ -71,6 +78,7 @@ export default function Navbar() {
             ))}
             <ThemeSwitcher />
             <Link
+                hrefLang="x-default"
                 href={`${i18n.locales.find(k=>k!==locale)}`}
                 aria-label={"Switch to other language"} 
                 className="block px-1 leading-7"

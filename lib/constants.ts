@@ -4,6 +4,6 @@ export const FADE_UP_ANIMATION_VARIANTS = {
 };
 
 export const i18n = {
-    locales: ['en', 'hk'],
-    defaultLocale: 'en'
+    locales: ['en-UK', 'zh-HK'],
+    defaultLocale: 'en-UK'
 };

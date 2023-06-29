@@ -2,7 +2,11 @@
 import { ImageResponse } from "next/server";
 export const runtime = "edge";
 export const alt = "Bobby Ho - Developer Portfolio";
-export const contentType = "image/webp";
+export const contentType = "image/png";
+export const size = {
+  width: 1200,
+  height: 630,
+}
 
 export default async function OG() {
   return new ImageResponse(
@@ -21,7 +25,7 @@ export default async function OG() {
         <img
           height={40}
           width={40}
-          src={new URL("../public/image/doge.webp", import.meta.url).toString()}
+          src={new URL("../public/image/doge-xs.png", import.meta.url).toString()}
           alt="Doge Logo"
           tw="w-40 h-40 mb-4 opacity-95"
         />
@@ -53,9 +57,6 @@ export default async function OG() {
         </h2>
       </div>
     ),
-    {
-      width: 1200,
-      height: 630,
-    },
+    size,
   );
 }

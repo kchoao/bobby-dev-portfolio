@@ -28,9 +28,9 @@ export const navbarContext = {
         title: "languageSwitcher"
     }
 }
-export const linkedinUrl = "https://www.linkedin.com/in/bobby-ho-dev/"
+export const linkedinUrl = "https://www.linkedin.com/in/bobby-ho-dev"
 export const githubUrl = "https://github.com/kchoao"
-export const webUrl = "https://bobbyho.vercel.app/"
+export const webUrl = "https://bobbyho.vercel.app"
 
 export const mainContext = {
     experience: [

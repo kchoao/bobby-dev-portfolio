@@ -11,6 +11,7 @@ export default function Footer() {
           {tContact.rich('title', {
             emoji: (t) => (
             <a 
+              hrefLang="en"
               aria-label="Easter Egg secret Youtube link"
               href={"https://youtu.be/Uq9QTPHYxSo?t=20"}
               target="_blank"
@@ -23,7 +24,8 @@ export default function Footer() {
         <h3 className="inline-block pb-6 border-b border-neutral-800 dark:border-neutral-100">
           {tContact.rich('content', {
             githubUrl: (t) => (
-              <a 
+              <a
+              hrefLang="en"
               aria-label="Github Link"
               className="font-medium underline transition-colors"
               href={githubUrl}
@@ -34,6 +36,7 @@ export default function Footer() {
               </a>),
             linkedinUrl: (t) => (
               <a 
+              hrefLang="en"
               aria-label="Linkedin Link"
               className="font-medium underline transition-colors"
               href={linkedinUrl}
