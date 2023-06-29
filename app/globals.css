@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* If the user prefers light mode, 
+we still enforce color-scheme: dark, despite the user preference */
+
+/* html {
+    color-scheme: dark;
+} */
+
+
 .fi{
     background-size: cover !important;
 
@@ -15,15 +23,13 @@
 
 @keyframes morph {
     0% {
-        border-radius: 60% 80% 70% 55% / 95% 60% 45% 65%;
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
-
     50% {
-        border-radius: 85% 65% 55% 70% / 70% 85% 50% 40%;
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
     }
-
     100% {
-        border-radius: 60% 80% 70% 55% / 95% 60% 45% 65%;
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
     }
 }
 

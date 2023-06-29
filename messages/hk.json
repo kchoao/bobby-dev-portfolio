@@ -1,0 +1,45 @@
+{
+    "navbar": {
+        "languageSwitcher": "中文",
+        "about" : "介紹",
+        "experience" : "經驗",
+        "projects" : "專案",
+        "thisSite" : "關於此站",
+        "contact" : "聯絡"
+    },
+    "hero": {
+        "title": "全端React軟件工程師 <emoji>🚀</emoji>",
+        "intro": "Hello! 我係 Bobby Ho，一個充滿熱誠，來自香港嘅軟件工程師 <emoji>🔥</emoji>"
+    },
+    "stack": {
+        "title": "技能樹"
+    },
+    "experience": {
+        "title": "經驗 <emoji>🎯</emoji>",
+        "title-frontendDevelopment": "前端開發",
+        "frontendDevelopment": "I'm proficient in responsive web design. I can build application from basic CSS, HTML, Javascript or using frameworks like React and Next.js.",
+        "title-backendDevelopment": "後端開發",
+        "backendDevelopment": "I'm experienced in Node.js, Nest.js and Express.js. I can build APIs using DTO pattern for self-use or for third-party use such as Sanity CMS, Stripe payment and Shopify E-commerce; Integrate relational databases like Postgres or document databases like Firestore.",
+        "title-passionateProgrammer": "熱愛鑽研技術",
+        "passionateProgrammer": "I love utilizing cutting-edge development tools and techniques. Also enjoy writing clean, maintainable, and well-documented code to ensure code quality and best practices.",
+        "title-teamPlayer": "團隊合作",
+        "teamPlayer": "As a former HKUST Dragon Boat Team captain, I understand the importance of teamwork and enjoy being a team player. Therefore, I would bring this experience into the working environment to collaborate with cross-functional teams for ensuring high-quality product delivery."
+    },
+    "project": {
+        "title": "專案 <emoji>🐣</emoji>",
+        "subtitle": "近期完成的專案",
+        "title-startupWeb": "Startup 網站",
+        "startupWeb": "Developed a fully responsive website for a startup. The site is optimized to work across all devices and platforms.",
+        "title-mobileApp": "蕃茄鐘 App",
+        "mobileApp": "A simple Pomodoro Timer app using Flutter. You can customize your study timer and choose from a variety of aesthetic themes."
+    },
+    "thisSite": {
+        "title": "關於此站<emoji>🌞</emoji>",
+        "subtitle": "效能優先",
+        "content": "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance."
+    },
+    "contact": {
+        "title": "聯絡我 <emoji>🧙</emoji>",
+        "content": "Do you have a job opportunity or idea you'd like to discuss? Feel free to reach me on <githubUrl>Github</githubUrl> and <linkedinUrl>Linkedin</linkedinUrl>~"
+    }
+}

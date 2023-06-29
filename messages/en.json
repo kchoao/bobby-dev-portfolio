@@ -1,0 +1,45 @@
+{
+    "navbar": {
+        "languageSwitcher": "Eng",
+        "about" : "About",
+        "experience" : "Experience",
+        "projects" : "Projects",
+        "thisSite" : "This Site",
+        "contact" : "Contact"
+    },
+    "hero": {
+        "title": "Full-Stack React Developer <emoji>🚀</emoji>",
+        "intro": "Hello! I&apos;m Bobby Ho. A passionate Full-stack React Developer from Hong Kong <emoji> 🔥</emoji>"
+    },
+    "stack": {
+        "title": "Tech Stack"
+    },
+    "experience": {
+        "title": "Experience <emoji>🎯</emoji>",
+        "title-frontendDevelopment": "Front-end Development",
+        "frontendDevelopment": "I'm proficient in responsive web design. I can build application from basic CSS, HTML, Javascript or using frameworks like React and Next.js.",
+        "title-backendDevelopment": "Back-end Development",
+        "backendDevelopment": "I'm experienced in Node.js, Nest.js and Express.js. I can build APIs using DTO pattern for self-use or for third-party use such as Sanity CMS, Stripe payment and Shopify E-commerce; Integrate relational databases like Postgres or document databases like Firestore.",
+        "title-passionateProgrammer": "Passionate Programmer",
+        "passionateProgrammer": "I love utilizing cutting-edge development tools and techniques. Also enjoy writing clean, maintainable, and well-documented code to ensure code quality and best practices.",
+        "title-teamPlayer": "Team Player",
+        "teamPlayer": "As a former HKUST Dragon Boat Team captain, I understand the importance of teamwork and enjoy being a team player. Therefore, I would bring this experience into the working environment to collaborate with cross-functional teams for high-quality product delivery."
+    },
+    "project": {
+        "title": "Projects <emoji>🐣</emoji>",
+        "subtitle": "Some of the projects I'm recently working on",
+        "title-startupWeb": "Startup Website",
+        "startupWeb": "Developed a fully responsive website for a startup. The site is optimized to work across all devices and platforms.",
+        "title-mobileApp": "Mobile App Development",
+        "mobileApp": "A simple Pomodoro Timer app using Flutter. You can customize your study timer and choose from a variety of aesthetic themes."
+    },
+    "thisSite": {
+        "title": "About this site<emoji>🌞</emoji>",
+        "subtitle": "Performance first",
+        "content": "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance."
+    },
+    "contact": {
+        "title": "Get in touch <emoji>🧙</emoji>",
+        "content": "Do you have a job opportunity or idea you'd like to discuss? Feel free to reach me on <githubUrl>Github</githubUrl> and <linkedinUrl>Linkedin</linkedinUrl>~"
+    }
+}

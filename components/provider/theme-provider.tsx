@@ -14,10 +14,12 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
     }
 
     return (
-    <NextThemeProvider 
-        // enableSystem={false} 
-        defaultTheme={'dark'}
-        attribute="class">
+        <NextThemeProvider 
+            attribute="class"
+            storageKey = 'theme'
+            defaultTheme = 'dark'
+            enableSystem={false}
+        >
         {children}
     </NextThemeProvider>);
 }

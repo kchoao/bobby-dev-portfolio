@@ -6,35 +6,24 @@ import { Session } from "next-auth";
 import ThemeSwitcher from "./theme-switcher";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { i18n } from '@/lib/constants';
+import { navbarContext } from "@/app/[locale]/context";
+import { useLocale, useTranslations } from "next-intl";
 
-const ROUTES = [
-  {
-    title: "About",
-    href: "#about"
-  },
-  {
-    title: "Skills",
-    href: "#skills"
-  },
-  {
-    title: "Projects",
-    href: "#projects"
-  },
-  {
-    title: "This Site",
-    href: "#this-site"
-  },
-  {
-    title: "Contact",
-    href: "#contact"
-  },
-]
 
-export default function NavBar({ session }: { session: Session | null }) {
+
+type NavbarProps = {
+  session?: Session | null
+}
+
+
+export default function Navbar({ session }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const closeMobileMenu = () => setMobileMenuOpen(false)
+  const locale = useLocale();
   const scrolled = useScroll(50);
-
+  const t = useTranslations('navbar');
+  
   return (
     <>
       {/* Backdrop */}
@@ -50,16 +39,16 @@ export default function NavBar({ session }: { session: Session | null }) {
             <X className="h-6 w-6" aria-hidden="true" />
         </button>
         <div className="text-right space-y-6 my-12">
-            {ROUTES.map((route, index) => (
+            {navbarContext.routes.map((route, index) => (
             <Link
                 key={`navigation-mobile-${index}`}
-                href={`${route.href}`} 
-                aria-label={route.title} 
+                href={`${locale}/${route.href}`} 
+                aria-label={t(route.title)} 
                 scroll={false}
                 onClick={closeMobileMenu}
-                className="block px-1 font-semibold leading-7"
+                className="block px-1 leading-7"
             >
-                {route.title}
+                {t(route.title)}
             </Link>
             ))}
         </div>
@@ -78,23 +67,31 @@ export default function NavBar({ session }: { session: Session | null }) {
             <p>Bobby Ho</p>
           </Link>
           <div className="flex gap-6 text-lg items-center">
-            {ROUTES.map((route, index)=>(
+            {navbarContext.routes.map((route, index)=>(
               <Link 
               key={`navigation-${index}`} 
               className="hidden lg:block hover:-translate-y-2 duration-300 transition-transform" 
-              href={`${route.href}`} 
-              aria-label={route.title} 
+              href={`${locale}/${route.href}`} 
+              aria-label={t(route.title)} 
               scroll={false}>
-                <p>{route.title}</p>
+                {t(route.title)}
               </Link>
             ))}
             <ThemeSwitcher />
+            <Link
+                href={`${i18n.locales.find(k=>k!==locale)}`}
+                aria-label={"Switch to other language"} 
+                className="block px-1 leading-7"
+            >
+                {t('languageSwitcher')}
+            </Link>
+            {/* <div>{context??""}</div> */}
             <button
                 type="button"
-                className="lg:hidden p-3 inline-flex items-center justify-center rounded-md hover:-translate-y-1 duration-500"
+                className="lg:hidden py-3 inline-flex items-center justify-center rounded-md hover:-translate-y-1 duration-500"
                 onClick={() => setMobileMenuOpen(true)}
             >
-                <span className="sr-only">Open main menu</span>
+                <span className="sr-only">Open navigation menu</span>
                 <Menu className="h-6 w-6" aria-hidden="true" />
             </button>
           </div>
