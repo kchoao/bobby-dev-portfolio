@@ -8,7 +8,7 @@
         "contact" : "聯絡"
     },
     "hero": {
-        "title": "全端React軟件工程師 <emoji>🚀</emoji>",
+        "title": "前端React軟件工程師 <emoji>🚀</emoji>",
         "intro": "Hello! 我係 Bobby Ho，一個充滿熱誠，來自香港嘅軟件工程師 <emoji>🔥</emoji>"
     },
     "stack": {
@@ -17,13 +17,13 @@
     "experience": {
         "title": "經驗 <emoji>🎯</emoji>",
         "title-frontendDevelopment": "前端開發",
-        "frontendDevelopment": "我精通響應式網頁設計。 我可以使用 CSS、HTML、Javascript 以及使用 React 和 Next.js 等框架以及 Tailwind 從頭開始構建應用程序。",
+        "frontendDevelopment": "我精通響應式網頁設計，可以使用 CSS、HTML 和 Javascript等傳統工具從頭開始構建應用程序，或使用 React 和 Next.js 等框架配合 Tailwind CSS 快速地建設網站🐳",
         "title-backendDevelopment": "後端開發",
-        "backendDevelopment": "我在 Node.js、Nest.js 和 Express.js 方面擁有豐富的經驗。 我擅長使用 DTO 模式和第三方 API（例如 Sanity、Stripe、Shopify）構建 API。 我還可以集成關係數據庫（如 Postgres）或文檔數據庫（如 Firestore）。",
+        "backendDevelopment": "不僅專注於前端開發，我還擁有 Node.js、Nest.js 和 Express.js 等後端語言的經驗 🦅 可使用 DTO 模式構建 API 以及運用 Sanity、Stripe 和 Shopify 等第三方 API ",
         "title-passionateProgrammer": "熱愛鑽研技術",
-        "passionateProgrammer": "我喜歡利用最新的開發工具和技術，同時還喜愛研究如何編寫更乾淨、可維護且文檔齊全的代碼，以確保代碼質量和培養最好的編寫習慣。",
+        "passionateProgrammer": "最喜歡利用尖端的開發工具和科技⚡目標是編寫清晰整齊、容易維護且文檔齊全的代碼，以確保代碼質量和運行效率。",
         "title-teamPlayer": "團隊合作",
-        "teamPlayer": "作為前科大龍舟隊隊長，我深知團隊合作的重要性，並享受團隊合作的樂趣。 因此，我會將這些經驗帶入工作環境中，與跨職能團隊協作，以確保高質量的產品交付。"
+        "teamPlayer": "作為科大龍舟隊前隊長，我深知團隊合作的重要性，並享受團隊合作的樂趣。 這就是為什麼我有信心將這些經驗帶入工作環境中，與跨職能團隊協作，以確保高質量的產品交付。"
     },
     "project": {
         "title": "專案 <emoji>🐣</emoji>",

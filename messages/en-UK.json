@@ -8,8 +8,8 @@
         "contact" : "Contact"
     },
     "hero": {
-        "title": "Full-Stack React Developer <emoji>🚀</emoji>",
-        "intro": "Hello! I'm Bobby Ho. A passionate Full-stack React Developer from Hong Kong <emoji> 🔥</emoji>"
+        "title": "Front-End React Developer <emoji>🚀</emoji>",
+        "intro": "Hello! I'm Bobby Ho. A passionate Front-End React Developer from Hong Kong <emoji> 🔥</emoji>"
     },
     "stack": {
         "title": "Tech Stack"
@@ -17,13 +17,13 @@
     "experience": {
         "title": "Experience <emoji>🎯</emoji>",
         "title-frontendDevelopment": "Front-end Development",
-        "frontendDevelopment": "I'm proficient in responsive web design. I can build application from scratch by using CSS, HTML, Javascript to using frameworks like React and Next.js with Tailwind.",
+        "frontendDevelopment": "I'm proficient in responsive web design. I can build applications from scratch using CSS, HTML, and Javascript or using frameworks like React and Next.js with Tailwind CSS 🐳",
         "title-backendDevelopment": "Back-end Development",
-        "backendDevelopment": "I'm experienced in Node.js, Nest.js and Express.js. I excel in building APIs using DTO pattern and third-party API such as Sanity, Stripe, Shopify. Also I can integrate relational databases like Postgres or document databases like Firestore.",
+        "backendDevelopment": "Not only specialize in frontend development, I also have experience in backend languages such as Node.js, Nest.js, and Express.js 🦅 building APIs using DTO patterns and third-party APIs such as Sanity, Stripe, and Shopify",
         "title-passionateProgrammer": "Passionate Programmer",
-        "passionateProgrammer": "I love utilizing cutting-edge development tools and techniques. Also enjoy writing clean, maintainable, and well-documented code to ensure code quality and best practices.",
+        "passionateProgrammer": "I love utilizing cutting-edge development tools and techniques ⚡ Also enjoy writing clean, maintainable, and well-documented code to ensure code quality and best practices.",
         "title-teamPlayer": "Team Player",
-        "teamPlayer": "As a former HKUST Dragon Boat Team captain, I understand the importance of teamwork and enjoy being a team player. Thats why I'm confident in collaborating with cross-functional teams for high-quality product delivery."
+        "teamPlayer": "As a former HKUST Dragon Boat Team Captain 🐲 I understand the importance of teamwork and enjoy being a team player. That's why I'm confident in collaborating with cross-functional teams for high-quality product delivery."
     },
     "project": {
         "title": "Projects <emoji>🐣</emoji>",
