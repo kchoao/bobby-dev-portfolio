@@ -21,25 +21,29 @@ export default function Navbar() {
       {/* Backdrop */}
       <div className={`${mobileMenuOpen? 'block':'hidden'} mobile-menu-overlay fixed inset-0 h-screen w-screen bg-black bg-opacity-50 z-30`} onClick={closeMobileMenu}/>
       {/* Mobile Menu Modal */}
-      <div className={`${mobileMenuOpen? 'w-2/5 px-6':'w-0 px-0'} py-6 mobile-menu-modal overflow-hidden fixed top-0 right-0 z-40 bg-zinc-200 dark:bg-zinc-700 h-full duration-300`}>
+      <div 
+      aria-label="mobile navigation bar" 
+      aria-hidden={!mobileMenuOpen}
+      className={`${mobileMenuOpen? 'w-2/5 px-6':'w-0 px-0'} py-6 mobile-menu-modal overflow-hidden fixed top-0 right-0 z-40 bg-zinc-200 dark:bg-zinc-700 h-full duration-300`}>
         <button
             type="button"
             className="-m-2.5 inline-flex items-center float-right justify-between rounded-md p-2.5"
             onClick={closeMobileMenu}
         >
             <span className="sr-only">Close menu</span>
-            <X className="h-6 w-6" aria-hidden="true" />
+            <X className="h-6 w-6" aria-hidden="true"/>
         </button>
-        <div className="text-right space-y-6 my-12">
+        <div className={`text-right space-y-6 my-12`} aria-hidden={!mobileMenuOpen} aria-label="mobile navigation link">
             {navbarContext.routes.map((route, index) => (
             <Link
+                aria-hidden={!mobileMenuOpen}
                 hrefLang="x-default"
-                key={`navigation-mobile-${index}`}
+                key={`mobile-navigation-${index}`}
                 href={`${locale}/${route.href}`} 
                 aria-label={t(route.title)} 
                 scroll={false}
                 onClick={closeMobileMenu}
-                className="block px-1 leading-7"
+                className={`block px-1 leading-7`}
             >
                 {t(route.title)}
             </Link>
@@ -64,13 +68,13 @@ export default function Navbar() {
             scroll={false}>
             <p>Bobby Ho</p>
           </Link>
-          <div className="flex gap-6 text-lg items-center">
+          <div className="flex gap-6 text-lg items-center" aria-label="navigation link">
             {navbarContext.routes.map((route, index)=>(
               <Link 
               hrefLang="x-default"
               key={`navigation-${index}`} 
               className="hidden lg:block hover:-translate-y-2 duration-300 transition-transform" 
-              href={`${locale}/${route.href}`} 
+              href={`${locale}/${route.href}`}
               aria-label={t(route.title)} 
               scroll={false}>
                 {t(route.title)}
@@ -80,12 +84,11 @@ export default function Navbar() {
             <Link
                 hrefLang="x-default"
                 href={`${i18n.locales.find(k=>k!==locale)}`}
-                aria-label={"Switch to other language"} 
+                aria-label={"Language Switcher"} 
                 className="block px-1 leading-7"
             >
                 {t('languageSwitcher')}
             </Link>
-            {/* <div>{context??""}</div> */}
             <button
                 type="button"
                 className="lg:hidden py-3 inline-flex items-center justify-center rounded-md hover:-translate-y-1 duration-500"

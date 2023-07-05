@@ -23,6 +23,7 @@ const ThemeSwitcher = () => {
     return (
         <>
             <DarkModeSwitch
+                aria-label="Dark Mode Switcher"
                 moonColor={"#FAFAFA"}
                 sunColor={"#27272A"}
                 checked={isDarkMode}

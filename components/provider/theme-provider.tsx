@@ -20,6 +20,7 @@ export default function ThemeProvider({ children }: { children: ReactNode }) {
             defaultTheme = 'dark'
             enableSystem={false}
         >
-        {children}
-    </NextThemeProvider>);
+            {children}
+        </NextThemeProvider>
+    );
 }

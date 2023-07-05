@@ -7,3 +7,5 @@ export const i18n = {
     locales: ['en-UK', 'zh-HK'],
     defaultLocale: 'en-UK'
 };
+
+export const easterEgg = "https://youtu.be/dQw4w9WgXcQ"

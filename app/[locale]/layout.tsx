@@ -57,6 +57,7 @@ export default function RootLayout({
                   <Nav locale={locale}/>
                 </Suspense>
                 <main 
+                  role="main"
                   className="relative h-full w-screen z-0
                   bg-zinc-200 dark:bg-zinc-700
                   text-sm lg:text-lg">

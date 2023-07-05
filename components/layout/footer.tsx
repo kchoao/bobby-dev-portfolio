@@ -1,4 +1,5 @@
 import { githubUrl, linkedinUrl } from "@/app/[locale]/context";
+import { easterEgg } from "@/lib/constants";
 import { useTranslations } from "next-intl";
 
 export default function Footer() {
@@ -13,7 +14,7 @@ export default function Footer() {
             <a 
               hrefLang="en"
               aria-label="Easter Egg secret Youtube link"
-              href={"https://youtu.be/Uq9QTPHYxSo?t=20"}
+              href={easterEgg}
               target="_blank"
               rel="noopener noreferrer"
               >
