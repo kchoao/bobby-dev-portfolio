@@ -25,11 +25,11 @@ export default function Project() {
                         <div key={`project-${index}`} className="lg:flex odd:flex-row even:flex-row-reverse gap-8 mt-12">
                             <div className="lg:w-3/5">
                                 <Image
-                                    height={400}
-                                    width={600}
+                                    height={600}
+                                    width={800}
                                     placeholder="blur"
                                     loading="lazy"
-                                    className="h-80 w-full rounded-xl object-cover"
+                                    className="h-fit w-fit rounded-xl object-contain lg:object-cover"
                                     alt={`Project picture: ${tProject(project.title)}`}
                                     src={project.src}
                                 />
