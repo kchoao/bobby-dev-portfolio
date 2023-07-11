@@ -22,7 +22,7 @@ we still enforce color-scheme: dark, despite the user preference */
         @apply text-3xl/relaxed lg:text-5xl/relaxed font-bold text-center lg:text-left 
     }
     .title-secondary {
-        @apply text-xl/relaxed lg:text-3xl/relaxed font-bold
+        @apply text-xl lg:text-3xl font-bold
     }
 }
 
