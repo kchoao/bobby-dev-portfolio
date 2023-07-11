@@ -1,5 +1,4 @@
-import WebProject from "@/public/image/web-project.webp"
-import AppProject from "@/public/image/app-project.webp"
+import Portfolio from "@/public/image/portfolio-web.webp"
 
 export const navbarContext = {
     routes : [
@@ -56,16 +55,38 @@ export const mainContext = {
     ],
     projects: [
         {
-            title: "title-startupWeb",
-            content: "startupWeb",
-            stacks: ["Nextjs", "Sanity CMS", "Shopify","Responsive Design"],
-            src: WebProject,
+            title: "title-portfolio",
+            content: "portfolio",
+            stacks: ["Next.js 13", "Tailwind CSS", "Typescript","Responsive Design"],
+            src: Portfolio,
+            projectUrl: webUrl,
+            githubUrl: "https://github.com/kchoao/bobby-dev-portfolio"
+        },
+        // {
+        //     title: "title-startupWeb",
+        //     content: "startupWeb",
+        //     stacks: ["Nextjs", "Sanity CMS", "Shopify","Responsive Design"],
+        //     src: WebProject,
+        // },
+        // {
+        //     title: "title-mobileApp",
+        //     content: "mobileApp",
+        //     stacks: ["Flutter", "Database", "Dart"],
+        //     src: AppProject,
+        // },
+    ],
+    thisSite: [
+        {
+            title: "title-performance",
+            content: "performance",
         },
         {
-            title: "title-mobileApp",
-            content: "mobileApp",
-            stacks: ["Flutter", "Database", "Dart"],
-            src: AppProject,
+            title: "title-accessibility",
+            content: "accessibility",
+        },
+        {
+            title: "title-seo",
+            content: "seo",
         },
     ]
 }

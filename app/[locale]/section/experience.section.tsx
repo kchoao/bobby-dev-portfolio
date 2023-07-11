@@ -10,7 +10,7 @@ export default function Experience() {
         <>
         <div id="experience" className="layout-primary">
             <div className="content-center">
-                <h2 className="text-center lg:text-left text-3xl/relaxed lg:text-5xl/relaxed font-bold">
+                <h2 className="title-primary">
                     {tExperience.rich("title", {
                         emoji: (t) => <span role="img" aria-label="direct hit emoji">{t}</span>
                     })}
@@ -24,7 +24,7 @@ export default function Experience() {
                                 </div>
                             </FadeInWhenVisible>
                             <div className="flex-1">
-                                <h3 className="h-12 lg:h-16 py-3 lg:py-4 text-left text-lg lg:text-3xl font-bold">{tExperience(experience.title)}</h3>
+                                <h3 className="h-12 lg:h-16 py-3 lg:py-4 text-left title-secondary">{tExperience(experience.title)}</h3>
                                 <div className="w-full text-left pt-3 lg:pt-6">
                                     <Balancer ratio={0.2}>
                                     {tExperience(experience.content)}

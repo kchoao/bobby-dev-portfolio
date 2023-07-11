@@ -28,6 +28,8 @@
     "project": {
         "title": "Projects <emoji>🐣</emoji>",
         "subtitle": "Some of the projects I'm recently working on",
+        "title-portfolio": "Portfolio Website",
+        "portfolio": "Developed a fully responsive website for myself, using Next.js 13 to build a blazingly fast, good accessibility and great SEO ranking website.",
         "title-startupWeb": "Startup Website",
         "startupWeb": "Developed a fully responsive website for a startup. The site has a CMS for client to manage website content and E-commerce shop for their sales.",
         "title-mobileApp": "Mobile App Development",
@@ -35,8 +37,12 @@
     },
     "thisSite": {
         "title": "About this site<emoji>🌞</emoji>",
-        "subtitle": "Performance first",
-        "content": "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance."
+        "title-performance": "Performance",
+        "performance": "Built on [Next.js 13](https://nextjs.org/) primitives like [Server Components](https://nextjs.org/docs/getting-started/react-essentials#server-components) for blazingly performance.",
+        "title-accessibility": "Accessibility",
+        "accessibility": "Use Accessible Name such as `aria-label` and `aria-hidden` to help Assistive Technologies",
+        "title-seo": "SEO",
+        "seo": "Implement components like [Metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata), [Sitemap](https://nextjs.org/learn/seo/crawling-and-indexing/xml-sitemaps), [OG](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/opengraph-image) and [Robot.txt](https://nextjs.org/learn/seo/crawling-and-indexing/robots-txt) to boost SEO ranking"
     },
     "contact": {
         "title": "Get in touch <emoji>🧙</emoji>",

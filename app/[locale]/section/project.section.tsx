@@ -2,6 +2,9 @@ import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 import { useTranslations } from "next-intl";
 import { mainContext } from "../context";
+import Link from "next/link";
+import { Link as LinkIcon } from "lucide-react";
+import Github from "@/components/shared/icons/github";
 
 
 export default function Project() {
@@ -11,7 +14,7 @@ export default function Project() {
         <>
         <div id="projects" className="layout-secondary">
             <div className="content-center">
-                <h2 className="text-center lg:text-left text-3xl/relaxed lg:text-5xl/relaxed font-bold mb-2 lg:mb-6">
+                <h2 className="title-primary mb-2 lg:mb-6">
                     {tProject.rich("title", {
                         emoji: (t) => <span role="img" aria-label="hatching chick emoji">{t}</span>
                     })}
@@ -31,8 +34,8 @@ export default function Project() {
                                     src={project.src}
                                 />
                             </div>
-                            <div className="lg:w-2/5 space-y-6 self-center mt-8 lg:mt-0">
-                                <h4 className="text-center text-lg lg:text-xl font-bold">{tProject(project.title)}</h4>
+                            <div className="lg:w-2/5 flex flex-col py-2 justify-between gap-y-8 mt-8 lg:mt-0">
+                                <h4 className="text-center title-secondary">{tProject(project.title)}</h4>
                                 <div className="w-full text-center">
                                     <Balancer ratio={0.2}>
                                     {tProject(project.content)}
@@ -44,6 +47,28 @@ export default function Project() {
                                             {stack}
                                         </div>
                                     ))}
+                                </div>
+                                <div className="self-center space-x-8">
+                                    <Link
+                                        className="inline-block"
+                                        hrefLang="en"
+                                        aria-label="Linkedin Link"
+                                        href={project.projectUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <LinkIcon className="h-8 neutral-700 dark:neutral-300 hover:-translate-y-2 duration-200 transition-all"/>
+                                    </Link>
+                                    <Link
+                                        className="inline-block"
+                                        hrefLang="en"
+                                        aria-label="Github Link"
+                                        href={project.githubUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <Github className="h-8 fill-neutral-700 dark:fill-neutral-300 hover:-translate-y-2 duration-200 transition-all"/>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

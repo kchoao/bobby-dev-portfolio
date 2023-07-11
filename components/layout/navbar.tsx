@@ -36,7 +36,6 @@ export default function Navbar() {
             {navbarContext.routes.map((route, index) => (
             <Link
                 hrefLang="x-default"
-                rel="canonical"
                 key={`mobile-navigation-${index}`}
                 href={`${locale}/${route.href}`} 
                 aria-label={t(route.title)} 
@@ -69,8 +68,7 @@ export default function Navbar() {
           </Link>
           <div className="flex gap-6 text-lg items-center" aria-label="navigation link">
             {navbarContext.routes.map((route, index)=>(
-              <Link 
-              rel="canonical"
+              <Link
               hrefLang="x-default"
               key={`navigation-${index}`} 
               className="hidden lg:block hover:-translate-y-2 duration-300 transition-transform" 
@@ -82,7 +80,6 @@ export default function Navbar() {
             ))}
             <ThemeSwitcher />
             <Link
-                rel="canonical"
                 hrefLang="x-default"
                 href={`${i18n.locales.find(k=>k!==locale)}`}
                 aria-label={"Language Switcher"} 

@@ -50,7 +50,7 @@ export default function Footer() {
           })}
         </h3>
       </div>
-      <p className="text-sm">Build with TypeScript, Tailwind and Next.js</p>
+      <p className="text-sm">Build with Next.js 13, Tailwind and TypeScript</p>
       <p className="mt-2 text-sm">
         Copyright © 2023. All rights are reserved
       </p>

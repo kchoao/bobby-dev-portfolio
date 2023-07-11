@@ -16,7 +16,7 @@ export default function Stack() {
         <div className="layout-secondary">
             <div className="content-center">
                 <div className="px-4">
-                    <h2 className="lg:hidden text-center text-3xl/relaxed font-bold mb-12">
+                    <h2 className="lg:hidden title-primary mb-12">
                         <div className="inline pb-1">
                             {tStack("title")}
                         </div>

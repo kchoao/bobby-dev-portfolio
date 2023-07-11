@@ -18,6 +18,12 @@ we still enforce color-scheme: dark, despite the user preference */
     .content-center {
         @apply max-w-7xl px-4 lg:mx-auto py-6 
     }
+    .title-primary {
+        @apply text-3xl/relaxed lg:text-5xl/relaxed font-bold text-center lg:text-left 
+    }
+    .title-secondary {
+        @apply text-xl/relaxed lg:text-3xl/relaxed font-bold
+    }
 }
 
 .fi{
