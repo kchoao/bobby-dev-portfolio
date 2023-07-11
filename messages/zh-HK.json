@@ -36,7 +36,7 @@
     "thisSite": {
         "title": "關於此站<emoji>🌞</emoji>",
         "subtitle": "效能優先",
-        "content": "基於 [Next.js](https://nextjs.org/) 原語構建，例如 `@next/font` 和 `next/image` ，以實現出色的性能。"
+        "content": "基於 [Next.js](https://nextjs.org/) 原語構建，例如 `@next/font` 和 `@next/image` ，以實現出色的性能。"
     },
     "contact": {
         "title": "聯絡我 <emoji>🧙</emoji>",

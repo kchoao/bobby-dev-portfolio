@@ -8,11 +8,20 @@ we still enforce color-scheme: dark, despite the user preference */
 /* html {
     color-scheme: dark;
 } */
-
+@layer components{
+    .layout-primary {
+        @apply h-fit w-full bg-neutral-100 dark:bg-neutral-800 py-12 lg:py-24 px-4
+    }
+    .layout-secondary {
+        @apply h-fit w-full py-12 lg:py-24 px-4
+    }
+    .content-center {
+        @apply max-w-7xl px-4 lg:mx-auto py-6 
+    }
+}
 
 .fi{
     background-size: cover !important;
-
 }
 
 

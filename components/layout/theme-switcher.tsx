@@ -7,7 +7,7 @@ const ThemeSwitcher = () => {
     const [mounted, setMounted] = useState(false);
     const { theme, setTheme } = useTheme();
 
-    const isDarkMode = theme === "dark"? true:false;
+    const isDarkMode = theme === "dark"
     const toggleDarkMode = (checked: boolean) => {
         checked? setTheme("dark"):setTheme("light");
     };
@@ -17,7 +17,7 @@ const ThemeSwitcher = () => {
     }, []);
 
     if (!mounted) {
-        return null;
+        return <div className="w-6"/>;
     }
 
     return (

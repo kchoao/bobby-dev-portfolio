@@ -8,4 +8,3 @@ export const i18n = {
     defaultLocale: 'en-UK'
 };
 
-export const easterEgg = "https://youtu.be/dQw4w9WgXcQ"

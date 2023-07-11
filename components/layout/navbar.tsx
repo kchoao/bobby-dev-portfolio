@@ -23,7 +23,6 @@ export default function Navbar() {
       {/* Mobile Menu Modal */}
       <div 
       aria-label="mobile navigation bar" 
-      aria-hidden={!mobileMenuOpen}
       className={`${mobileMenuOpen? 'w-2/5 px-6':'w-0 px-0'} py-6 mobile-menu-modal overflow-hidden fixed top-0 right-0 z-40 bg-zinc-200 dark:bg-zinc-700 h-full duration-300`}>
         <button
             type="button"
@@ -33,11 +32,11 @@ export default function Navbar() {
             <span className="sr-only">Close menu</span>
             <X className="h-6 w-6" aria-hidden="true"/>
         </button>
-        <div className={`text-right space-y-6 my-12`} aria-hidden={!mobileMenuOpen} aria-label="mobile navigation link">
+        <div className={`text-right space-y-6 my-12`} aria-label="mobile navigation link">
             {navbarContext.routes.map((route, index) => (
             <Link
-                aria-hidden={!mobileMenuOpen}
                 hrefLang="x-default"
+                rel="canonical"
                 key={`mobile-navigation-${index}`}
                 href={`${locale}/${route.href}`} 
                 aria-label={t(route.title)} 
@@ -71,6 +70,7 @@ export default function Navbar() {
           <div className="flex gap-6 text-lg items-center" aria-label="navigation link">
             {navbarContext.routes.map((route, index)=>(
               <Link 
+              rel="canonical"
               hrefLang="x-default"
               key={`navigation-${index}`} 
               className="hidden lg:block hover:-translate-y-2 duration-300 transition-transform" 
@@ -82,6 +82,7 @@ export default function Navbar() {
             ))}
             <ThemeSwitcher />
             <Link
+                rel="canonical"
                 hrefLang="x-default"
                 href={`${i18n.locales.find(k=>k!==locale)}`}
                 aria-label={"Language Switcher"} 
