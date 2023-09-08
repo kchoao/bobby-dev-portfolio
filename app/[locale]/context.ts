@@ -31,7 +31,7 @@ export const navbarContext = {
 export const easterEggUrl = "https://youtu.be/dQw4w9WgXcQ"
 export const linkedinUrl = "https://www.linkedin.com/in/bobby-ho-dev"
 export const githubUrl = "https://github.com/kchoao"
-export const webUrl = "https://bobbyho.vercel.app"
+export const webUrl = "https://www.bobbyho.dev"
 
 export const mainContext = {
     experience: [
